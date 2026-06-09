@@ -1,42 +1,52 @@
 import requests
+import json
+import re
 
-# ১. যেসব সোর্স থেকে চ্যানেল নিতে চান (এখানে ডেমো হিসেবে কিছু দেওয়া হলো)
 sources = [
-    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/bd.m3u", # বাংলাদেশ
-    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in.m3u"  # ইন্ডিয়া
+    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/bd.m3u",
+    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in.m3u"
 ]
 
 valid_channels = []
 
-print("চ্যানেল স্ক্র্যাপিং এবং চেকিং শুরু হচ্ছে...")
+print("চ্যানেল স্ক্র্যাপিং শুরু হচ্ছে...")
 
 for source in sources:
     try:
         response = requests.get(source, timeout=10)
         if response.status_code == 200:
             lines = response.text.split('\n')
-            current_info = ""
+            current_name = "Unknown Channel"
             
             for line in lines:
                 if line.startswith("#EXTINF"):
-                    current_info = line
+                    # নাম খুঁজে বের করার চেষ্টা
+                    name_match = re.search(r',([^,]+)$', line)
+                    if name_match:
+                        current_name = name_match.group(1).strip()
                 elif line.startswith("http"):
                     url = line.strip()
-                    # ২. লিঙ্কটি সচল কিনা চেক করা (Link Validation)
                     try:
-                        # শুধু হেডার চেক করা হচ্ছে যাতে দ্রুত কাজ হয়
                         check_res = requests.head(url, timeout=3, allow_redirects=True)
                         if check_res.status_code == 200:
-                            valid_channels.append(f"{current_info}\n{url}")
+                            # নাম এবং ইউআরএল ডিকশনারি আকারে রাখা
+                            valid_channels.append({
+                                "name": current_name,
+                                "url": url
+                            })
                     except:
-                        pass # ডেড লিঙ্ক হলে বাদ যাবে
+                        pass
     except Exception as e:
-        print(f"Error loading source {source}: {e}")
+        print(f"Error: {e}")
 
-# ৩. ফ্রেশ M3U প্লেলিস্ট ফাইল তৈরি করা
+# ১. আগের মতো M3U ফাইলও তৈরি হবে (VLC এর জন্য)
 with open("live_tv.m3u", "w", encoding="utf-8") as f:
     f.write("#EXTM3U\n")
-    for channel in valid_channels:
-        f.write(channel + "\n")
+    for ch in valid_channels:
+        f.write(f"#EXTINF:-1,{ch['name']}\n{ch['url']}\n")
 
-print(f"কাজ শেষ! মোট {len(valid_channels)}টি সচল চ্যানেল পাওয়া গেছে।")
+# ২. কোডুলারের জন্য স্পেশাল JSON ফাইল তৈরি হবে
+with open("channels.json", "w", encoding="utf-8") as f:
+    json.dump(valid_channels, f, ensure_ascii=False, indent=4)
+
+print("সব ফাইল আপডেট কমপ্লিট!")
