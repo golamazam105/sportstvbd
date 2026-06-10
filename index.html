@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Live TV Portal</title>
+    <title>Live TV Portal - Stay on Site</title>
     
-    <!-- Video.js CSS -->
     <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
     
     <style>
@@ -18,7 +17,6 @@
         }
         h1 { text-align: center; color: #00ff88; margin-bottom: 30px; }
 
-        /* সার্চ ও ফিল্টার এরিয়া */
         .controls {
             display: flex;
             justify-content: center;
@@ -39,7 +37,7 @@
             flex: 1;
         }
 
-        /* 🔳 গ্রিড ভিউ ডিজাইন (Grid View) */
+        /* গ্রিড ভিউ */
         .tv-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -66,87 +64,55 @@
             border-color: #00ff88;
             box-shadow: 0 8px 20px rgba(0, 255, 136, 0.2);
         }
-        .channel-name {
-            font-size: 16px;
-            font-weight: bold;
-            color: #fff;
-            margin-bottom: 10px;
-        }
+        .channel-name { font-size: 16px; font-weight: bold; color: #fff; }
         .channel-cat {
-            font-size: 12px;
-            color: #00ff88;
+            font-size: 12px; color: #00ff88;
             background: rgba(0, 255, 136, 0.1);
-            padding: 4px 8px;
-            border-radius: 20px;
-            align-self: center;
+            padding: 4px 8px; border-radius: 20px; align-self: center;
         }
 
-        /* 📑 পপ-আপ বা মোডাল (Modal) ডিজাইন */
+        /* ইন-সাইট মোডাল প্লেয়ার */
         .modal {
             display: none; 
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.85);
+            background: rgba(0,0,0,0.9);
             justify-content: center;
             align-items: center;
             z-index: 1000;
         }
         .modal-content {
             background: #1a1a24;
-            padding: 30px;
+            padding: 20px;
             border-radius: 16px;
             width: 90%;
-            max-width: 650px;
+            max-width: 750px;
             text-align: center;
             border: 1px solid #333;
             position: relative;
         }
         .close-btn {
             position: absolute;
-            top: 15px; right: 20px;
+            top: 10px; right: 20px;
             font-size: 30px; color: #aaa; cursor: pointer;
+            z-index: 10;
         }
         .close-btn:hover { color: white; }
         
-        /* মোডালের ভেতরের প্লেয়ার অপশন বাটন */
-        .player-options {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
-        .btn {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 6px;
-            font-weight: bold;
-            cursor: pointer;
-            text-decoration: none;
-            font-size: 14px;
-            transition: 0.2s;
-        }
-        .btn-web { background: #00ff88; color: black; }
-        .btn-vlc { background: #ff8800; color: white; }
-        .btn-mx { background: #0084ff; color: white; }
-        .btn:hover { opacity: 0.9; transform: scale(1.05); }
-
-        /* ওয়েব প্লেয়ার কন্টেইনার (শুরুতে লুকানো থাকবে) */
         #web-player-wrapper {
-            display: none;
-            margin-bottom: 20px;
+            margin-top: 15px;
             background: #000;
             border-radius: 8px;
             overflow: hidden;
+            aspect-ratio: 16/9;
         }
-        .video-js { width: 100% !important; height: 360px !important; }
+        .video-js { width: 100% !important; height: 100% !important; }
     </style>
 </head>
 <body>
 
     <h1>লাইভ টিভি পোর্টাল</h1>
 
-    <!-- কন্ট্রোল সেকশন -->
     <div class="controls">
         <select id="category-filter" class="category-select">
             <option value="all">সব ক্যাটাগরি</option>
@@ -154,48 +120,34 @@
         <input type="text" id="search" class="search-box" placeholder="চ্যানেলের নাম টাইপ করুন...">
     </div>
 
-    <!-- চ্যানেল গ্রিড -->
     <div id="tv-grid" class="tv-grid"></div>
 
-    <!-- প্লেয়ার মোডাল (Popup) -->
     <div id="player-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
-            <h3 id="modal-channel-name">চ্যানেলের নাম</h3>
+            <h3 id="modal-channel-name" style="margin: 0 0 10px 0; color: #00ff88;">চ্যানেলের নাম</h3>
             
-            <!-- সরাসরি ওয়েবসাইট প্লেয়ার -->
             <div id="web-player-wrapper">
                 <video id="tv-player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto">
-                    <p class="vjs-no-js">JavaScript required</p>
+                    <p class="vjs-no-js">JavaScript Required</p>
                 </video>
-            </div>
-
-            <p>কোথায় প্লে করতে চান সিলেক্ট করুন:</p>
-            <div class="player-options">
-                <button class="btn btn-web" onclick="startWebPlayer()">🌐 ব্রাউজার প্লেয়ার</button>
-                <a id="vlc-link" class="btn btn-vlc" href="#">🧡 VLC Player-এ দেখুন</a>
-                <a id="mx-link" class="btn btn-mx" href="#">💙 MX Player (Android)</a>
             </div>
         </div>
     </div>
 
-    <!-- Video.js Script -->
     <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
 
     <script>
         let player;
         let allChannels = [];
-        let currentUrl = "";
 
-        // 🔗 আপনার GitHub RAW JSON লিঙ্কটি এখানে বসান
-        const jsonUrl = 'https://raw.githubusercontent.com/golamazam105/sportstvbd/refs/heads/main/channels.json'; 
-
-        // পৃষ্ঠা লোড হলে প্লেয়ার রেডি করা
         window.onload = function() {
             player = videojs('tv-player');
         };
 
-        // ডাটা ফেচ করা
+        // 🔗 আপনার GitHub RAW JSON লিঙ্কটি এখানে বসান
+        const jsonUrl = 'https://raw.githubusercontent.com/golamazam105/sportstvbd/refs/heads/main/channels.json'; 
+
         fetch(jsonUrl)
             .then(response => response.json())
             .then(data => {
@@ -215,7 +167,6 @@
             });
         }
 
-        // গ্রিড ভিউ রেন্ডার করা
         function renderGrid(channels) {
             const grid = document.getElementById('tv-grid');
             grid.innerHTML = '';
@@ -229,40 +180,35 @@
                 `;
                 
                 card.onclick = function() {
-                    openPlayerOption(channel.url, channel.name);
+                    openPlayer(channel.url, channel.name);
                 };
                 grid.appendChild(card);
             });
         }
 
-        // কার্ডে ক্লিক করলে মোডাল ওপেন হবে
-        function openPlayerOption(url, name) {
-            currentUrl = url;
+        // 💡 এই ফাংশনটি দিয়ে ভিডিওটি সাইটের ভেতরেই প্লে করা হচ্ছে
+        function openPlayer(url, name) {
             document.getElementById('modal-channel-name').innerText = name;
-            
-            // 💡 ম্যাজিক লিঙ্ক: এই ফরম্যাটগুলো মোবাইল/পিসির অ্যাপ ওপেন করতে বাধ্য করে
-            document.getElementById('vlc-link').href = `vlc://${url}`;
-            document.getElementById('mx-link').href = `intent:${url}#Intent;package=com.mxtech.videoplayer.ad;end`;
-
-            // ওয়েব প্লেয়ার প্যানেল রিসেট করা
-            document.getElementById('web-player-wrapper').style.display = "none";
-            player.pause();
-
             document.getElementById('player-modal').style.display = "flex";
-        }
 
-        // ইউজার যদি ব্রাউজারেই দেখতে চায়
-        function startWebPlayer() {
-            document.getElementById('web-player-wrapper').style.display = "block";
-            player.src({ src: currentUrl, type: 'application/x-mpegURL' });
+            // ⚡ CORS Bypass Proxy (ভিডিও লিঙ্ক ব্রাউজারে খোলার ট্রিক)
+            // যদি কোনো লিঙ্ক প্লে না হয়, তবে নিচের লাইনের শুরুতে থাকা '//' কেটে দিতে পারেন
+            // let proxyUrl = "https://cors-anywhere.herokuapp.com/" + url;
+            
+            player.src({
+                src: url, // প্রক্সি ব্যবহার করতে চাইলে এখানে 'proxyUrl' বসাবেন
+                type: 'application/x-mpegURL'
+            });
+            
             player.play().catch(e => {
-                alert("দুঃখিত! এই লিঙ্কটি ব্রাউজারে সাপোর্ট করছে না। দয়া করে VLC Player অপশনটি ব্যবহার করুন।");
+                console.log("Playback error: ", e);
             });
         }
 
         function closeModal() {
             document.getElementById('player-modal').style.display = "none";
             player.pause();
+            player.reset(); // প্লেয়ার মেমোরি ক্লিয়ার করা
         }
 
         // ফিল্টারিং
