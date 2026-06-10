@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>লাইভ টিভি প্লেয়ার — Vercel App</title>
+    <title>লাইভ টিভি প্লেয়ার — Vercel</title>
     
     <!-- Video.js CSS -->
     <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
@@ -16,11 +16,11 @@
         h1 { text-align: center; margin-bottom: 20px; color: #00adb5; }
         .player-wrapper { position: relative; width: 100%; max-width: 800px; margin: 0 auto 30px auto; background: #000; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         .video-js { width: 100%; aspect-ratio: 16 / 9; }
-        .channel-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 15px; margin-top: 20px; }
-        .channel-card { background-color: #1e1e1e; border: 1px solid #333; border-radius: 10px; padding: 15px; text-align: center; cursor: pointer; transition: all 0.3s ease; }
+        .channel-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px; margin-top: 20px; justify-content: center; }
+        .channel-card { background-color: #1e1e1e; border: 1px solid #333; border-radius: 10px; padding: 20px; text-align: center; cursor: pointer; transition: all 0.3s ease; }
         .channel-card:hover { background-color: #00adb5; transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0, 173, 181, 0.4); }
-        .channel-icon { font-size: 32px; margin-bottom: 10px; }
-        .channel-name { font-size: 14px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .channel-icon { font-size: 35px; margin-bottom: 10px; }
+        .channel-name { font-size: 15px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
         .loading { text-align: center; font-size: 18px; color: #888; }
     </style>
 </head>
@@ -33,7 +33,7 @@
         <video id="my-live-player" class="video-js vjs-theme-city" controls preload="auto" width="800"></video>
     </div>
 
-    <div id="loading" class="loading">চ্যানেল লিস্ট লোড হচ্ছে...</div>
+    <div id="loading" class="loading">গিটহাব থেকে চ্যানেল লিস্ট লোড হচ্ছে...</div>
     <div class="channel-grid" id="channel-list"></div>
 </div>
 
@@ -45,35 +45,37 @@
     // আপনার তৈরি করা ক্লাউডফ্লেয়ার প্রক্সি লিঙ্ক
     const proxyUrl = "https://plain-silence-b434.azam-canvapro.workers.dev/?url=";
 
-    // যেহেতু ফাইলটি একই সার্ভারে থাকবে, তাই কোনো ডোমেইন দরকার নেই, শুধু ফাইলের নাম দিলেই হবে
-    const jsonSource = "channels.json"; 
+    // আপনার দেওয়া অরিজিনাল গিটহাব র লিঙ্ক
+    const githubJsonUrl = "https://raw.githubusercontent.com/golamazam105/sportstvbd/refs/heads/main/channels.json"; 
 
     async function loadChannels() {
         try {
-            const response = await fetch(jsonSource);
-            const channels = await response.json();
+            // প্রক্সি দিয়ে গিটহাবের ডেটা ফেচ করা হচ্ছে
+            const finalJsonFetchUrl = proxyUrl + encodeURIComponent(githubJsonUrl);
+            const response = await fetch(finalJsonFetchUrl);
+            const channelData = await response.json();
             
             document.getElementById('loading').style.display = 'none';
             const grid = document.getElementById('channel-list');
 
-            channels.forEach(channel => {
-                const card = document.createElement('div');
-                card.className = 'channel-card';
-                card.onclick = () => playChannel(channel.url);
-                card.innerHTML = `
-                    <div class="channel-icon">📺</div>
-                    <div class="channel-name" title="${channel.name}">${channel.name}</div>
-                `;
-                grid.appendChild(card);
-            });
+            // একটি সিঙ্গেল চ্যানেলের কার্ড তৈরি করা হচ্ছে
+            const card = document.createElement('div');
+            card.className = 'channel-card';
+            card.onclick = () => playChannel(channelData.url);
+            card.innerHTML = `
+                <div class="channel-icon">📺</div>
+                <div class="channel-name" title="${channelData.name}">${channelData.name}</div>
+            `;
+            grid.appendChild(card);
 
-            if(channels.length > 0) {
-                playChannel(channels[0].url);
+            // অটোমেটিক প্রথম চ্যানেলটি প্লেয়ারে লোড করা হচ্ছে
+            if(channelData.url) {
+                playChannel(channelData.url);
             }
 
         } catch (error) {
             console.error("Error:", error);
-            document.getElementById('loading').innerText = "চ্যানেল লিস্ট লোড করতে সমস্যা হয়েছে!";
+            document.getElementById('loading').innerText = "চ্যানেল লিস্ট লোড করতে সমস্যা হয়েছে! প্রক্সি বা গিটহাব লিঙ্ক চেক করুন।";
         }
     }
 
