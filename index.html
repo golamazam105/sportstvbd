@@ -1,99 +1,250 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>লাইভ টিভি প্লেয়ার — Vercel</title>
+    <title>Live TV Player (1000+ Channels)</title>
     
     <!-- Video.js CSS -->
-    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
-    <link href="https://unpkg.com/@videojs/themes@1.0.1/dist/city/index.css" rel="stylesheet">
-
+    <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
+    
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
-        body { background-color: #121212; color: #ffffff; padding: 20px; }
-        .container { max-width: 1200px; margin: 0 auto; }
-        h1 { text-align: center; margin-bottom: 20px; color: #00adb5; }
-        .player-wrapper { position: relative; width: 100%; max-width: 800px; margin: 0 auto 30px auto; background: #000; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .video-js { width: 100%; aspect-ratio: 16 / 9; }
-        .channel-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px; margin-top: 20px; justify-content: center; }
-        .channel-card { background-color: #1e1e1e; border: 1px solid #333; border-radius: 10px; padding: 20px; text-align: center; cursor: pointer; transition: all 0.3s ease; }
-        .channel-card:hover { background-color: #00adb5; transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0, 173, 181, 0.4); }
-        .channel-icon { font-size: 35px; margin-bottom: 10px; }
-        .channel-name { font-size: 15px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-        .loading { text-align: center; font-size: 18px; color: #888; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 { margin-bottom: 20px; color: #00ff88; font-size: 28px; }
+        
+        /* মেইন লেআউট কন্টেইনার */
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            height: 550px;
+            background: #1e1e1e;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+        }
+        
+        /* বামে চ্যানেল সেকশন */
+        .channel-section {
+            width: 30%;
+            background: #181818;
+            display: flex;
+            flex-direction: column;
+            border-right: 2px solid #282828;
+        }
+        
+        /* ফিল্টার ও সার্চ বক্স */
+        .filter-container {
+            padding: 15px;
+            background: #222;
+            border-bottom: 1px solid #282828;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .search-box, .category-select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            background: #2a2a2a;
+            border: 1px solid #444;
+            color: white;
+            border-radius: 6px;
+            outline: none;
+            font-size: 14px;
+        }
+        .category-select option {
+            background: #222;
+            color: white;
+        }
+        
+        /* স্ক্রোলিং চ্যানেল লিস্ট */
+        .channel-list {
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+        .channel-item {
+            padding: 12px 15px;
+            cursor: pointer;
+            border-bottom: 1px solid #222;
+            transition: 0.2s;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .channel-item:hover { background: #00ff88; color: black; font-weight: bold; }
+        .channel-item.active { background: #00aa66; color: white; font-weight: bold; }
+        
+        /* ছোট ক্যাটাগরি ট্যাগ */
+        .category-tag {
+            font-size: 11px;
+            background: #333;
+            color: #aaa;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        .channel-item:hover .category-tag {
+            background: #000;
+            color: #fff;
+        }
+        
+        /* ডানে প্লেয়ার সেকশন */
+        .player-container {
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+        }
+        .video-js {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        /* মোবাইল ফ্রেন্ডলি ডিজাইন */
+        @media (max-width: 768px) {
+            .container { flex-direction: column; height: auto; }
+            .channel-section { width: 100%; height: 350px; }
+            .player-container { width: 100%; height: 250px; }
+        }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>আমার লাইভ টিভি অ্যাপ</h1>
+    <h1>মাই লাইভ টিভি ওয়েবসাইট</h1>
 
-    <div class="player-wrapper">
-        <video id="my-live-player" class="video-js vjs-theme-city" controls preload="auto" width="800"></video>
+    <div class="container">
+        <!-- বামে: ফিল্টার এবং চ্যানেল লিস্ট -->
+        <div class="channel-section">
+            <div class="filter-container">
+                <!-- ক্যাটাগরি ড্রপডাউন -->
+                <select id="category-filter" class="category-select">
+                    <option value="all">সব ক্যাটাগরি (All Categories)</option>
+                </select>
+                <!-- সার্চ বক্স -->
+                <input type="text" id="search" class="search-box" placeholder="চ্যানেলের নাম খুঁজুন...">
+            </div>
+            
+            <div id="channels" class="channel-list"></div>
+        </div>
+        
+        <!-- ডানে: ভিডিও প্লেয়ার -->
+        <div class="player-container">
+            <video id="tv-player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto">
+                <p class="vjs-no-js">To view this video please enable JavaScript</p>
+            </video>
+        </div>
     </div>
 
-    <div id="loading" class="loading">গিটহাব থেকে চ্যানেল লিস্ট লোড হচ্ছে...</div>
-    <div class="channel-grid" id="channel-list"></div>
-</div>
+    <!-- Video.js JavaScript -->
+    <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
 
-<script src="https://vjs.zencdn.net/8.10.0/video.js"></script>
+    <script>
+        const player = videojs('tv-player');
+        let allChannels = [];
 
-<script>
-    const player = videojs('my-live-player', { fluid: true, autoplay: false, controls: true });
+        // 🔗 আপনার GitHub RAW JSON লিঙ্কটি এখানে বসান
+        const jsonUrl = 'YOUR_GITHUB_RAW_JSON_URL'; 
 
-    // আপনার তৈরি করা ক্লাউডফ্লেয়ার প্রক্সি লিঙ্ক
-    const proxyUrl = "https://plain-silence-b434.azam-canvapro.workers.dev/?url=";
+        // GitHub থেকে ডাটা লোড করা
+        fetch(jsonUrl)
+            .then(response => response.json())
+            .then(data => {
+                allChannels = data;
+                
+                // ক্যাটাগরি ড্রপডাউন তৈরি করা
+                populateCategories(allChannels);
+                
+                // সব চ্যানেল স্ক্রিনে দেখানো
+                renderChannels(allChannels);
+                
+                // প্রথম চ্যানেলটি অটোমেটিক প্লে করা (যেমন: Independent TV)
+                if(allChannels.length > 0) {
+                    playChannel(allChannels[0].url, allChannels[0].name);
+                }
+            })
+            .catch(error => console.error('Error fetching channels:', error));
 
-    // আপনার দেওয়া অরিজিনাল গিটহাব র লিঙ্ক
-    const githubJsonUrl = "https://raw.githubusercontent.com/golamazam105/sportstvbd/refs/heads/main/channels.json"; 
-
-    async function loadChannels() {
-        try {
-            // প্রক্সি দিয়ে গিটহাবের ডেটা ফেচ করা হচ্ছে
-            const finalJsonFetchUrl = proxyUrl + encodeURIComponent(githubJsonUrl);
-            const response = await fetch(finalJsonFetchUrl);
-            const channelData = await response.json();
+        // ড্রপডাউনে ইউনিক ক্যাটাগরিগুলো যোগ করার ফাংশন
+        function populateCategories(channels) {
+            const select = document.getElementById('category-filter');
+            const categories = new Set(); // ডুপ্লিকেট বাদ দেওয়ার জন্য Set
             
-            document.getElementById('loading').style.display = 'none';
-            const grid = document.getElementById('channel-list');
-
-            // একটি সিঙ্গেল চ্যানেলের কার্ড তৈরি করা হচ্ছে
-            const card = document.createElement('div');
-            card.className = 'channel-card';
-            card.onclick = () => playChannel(channelData.url);
-            card.innerHTML = `
-                <div class="channel-icon">📺</div>
-                <div class="channel-name" title="${channelData.name}">${channelData.name}</div>
-            `;
-            grid.appendChild(card);
-
-            // অটোমেটিক প্রথম চ্যানেলটি প্লেয়ারে লোড করা হচ্ছে
-            if(channelData.url) {
-                playChannel(channelData.url);
-            }
-
-        } catch (error) {
-            console.error("Error:", error);
-            document.getElementById('loading').innerText = "চ্যানেল লিস্ট লোড করতে সমস্যা হয়েছে! প্রক্সি বা গিটহাব লিঙ্ক চেক করুন।";
+            channels.forEach(channel => {
+                if(channel.category) categories.add(channel.category);
+            });
+            
+            categories.forEach(category => {
+                const option = document.createElement('option');
+                option.value = category;
+                option.innerText = category;
+                select.appendChild(option);
+            });
         }
-    }
 
-    function playChannel(rawUrl) {
-        // ক্লাউডফ্লেয়ার প্রক্সি দিয়ে m3u8 লিঙ্ক পাস করানো হচ্ছে
-        const finalStreamUrl = proxyUrl + encodeURIComponent(rawUrl);
+        // চ্যানেল লিস্ট স্ক্রিনে রেন্ডার করার ফাংশন
+        function renderChannels(channels) {
+            const container = document.getElementById('channels');
+            container.innerHTML = ''; 
+            
+            channels.forEach((channel) => {
+                const item = document.createElement('div');
+                item.className = 'channel-item';
+                
+                // নাম এবং ক্যাটাগরি ট্যাগ ডিজাইন
+                item.innerHTML = `
+                    <span>${channel.name}</span>
+                    <span class="category-tag">${channel.category || 'Live'}</span>
+                `;
+                
+                item.onclick = function() {
+                    document.querySelectorAll('.channel-item').forEach(el => el.classList.remove('active'));
+                    item.classList.add('active');
+                    playChannel(channel.url, channel.name);
+                };
+                
+                container.appendChild(item);
+            });
+        }
 
-        player.src({
-            src: finalStreamUrl,
-            type: 'application/x-mpegURL'
-        });
+        // লাইভ প্লে করার মেইন ফাংশন
+        function playChannel(url, name) {
+            player.src({
+                src: url,
+                type: 'application/x-mpegURL'
+            });
+            player.play().catch(error => {
+                console.log("Autoplay blocked or link issue: ", error);
+            });
+        }
 
-        player.play();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+        // 🔍 ফিল্টারিং ফাংশন (সার্চ এবং ক্যাটাগরি একসাথে কাজ করবে)
+        function filterChannels() {
+            const searchKeyword = document.getElementById('search').value.toLowerCase();
+            const selectedCategory = document.getElementById('category-filter').value;
+            
+            const filtered = allChannels.filter(channel => {
+                const matchesSearch = channel.name.toLowerCase().includes(searchKeyword);
+                const matchesCategory = (selectedCategory === 'all') || (channel.category === selectedCategory);
+                return matchesSearch && matchesCategory;
+            });
+            
+            renderChannels(filtered);
+        }
 
-    window.onload = loadChannels;
-</script>
-
+        // ইভেন্ট লিসেনার (টাইপ বা ক্যাটাগরি চেঞ্জ করলে কল হবে)
+        document.getElementById('search').addEventListener('input', filterChannels);
+        document.getElementById('category-filter').addEventListener('change', filterChannels);
+    </script>
 </body>
 </html>
