@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live TV Portal - Stay on Site</title>
+    <title>VLC Web Live TV Portal</title>
     
     <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
     
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: #0f0f12;
+            background-color: #0c0c0e;
             color: white;
             margin: 0;
             padding: 20px;
         }
-        h1 { text-align: center; color: #00ff88; margin-bottom: 30px; }
+        h1 { text-align: center; color: #ff8800; margin-bottom: 30px; text-shadow: 0 0 10px rgba(255,136,0,0.3); }
 
+        /* কন্ট্রোল বাটন ও সার্চ */
         .controls {
             display: flex;
             justify-content: center;
@@ -28,7 +29,7 @@
         }
         .search-box, .category-select {
             padding: 12px 20px;
-            background: #1a1a24;
+            background: #16161e;
             border: 1px solid #333;
             color: white;
             border-radius: 8px;
@@ -37,7 +38,7 @@
             flex: 1;
         }
 
-        /* গ্রিড ভিউ */
+        /* 🔳 গ্রিড ভিউ ডিজাইন */
         .tv-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -46,32 +47,31 @@
             margin: 0 auto;
         }
         .channel-card {
-            background: #1a1a24;
-            border: 1px solid #2a2a3a;
+            background: #16161e;
+            border: 1px solid #252530;
             border-radius: 12px;
             padding: 20px;
             text-align: center;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            height: 100px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: 100px;
         }
         .channel-card:hover {
             transform: translateY(-5px);
-            border-color: #00ff88;
-            box-shadow: 0 8px 20px rgba(0, 255, 136, 0.2);
+            border-color: #ff8800; /* VLC Orange */
+            box-shadow: 0 8px 20px rgba(255, 136, 0, 0.2);
         }
         .channel-name { font-size: 16px; font-weight: bold; color: #fff; }
         .channel-cat {
-            font-size: 12px; color: #00ff88;
-            background: rgba(0, 255, 136, 0.1);
+            font-size: 12px; color: #ff8800;
+            background: rgba(255, 136, 0, 0.1);
             padding: 4px 8px; border-radius: 20px; align-self: center;
         }
 
-        /* ইন-সাইট মোডাল প্লেয়ার */
+        /* 🧡 কাস্টম VLC মোডাল প্লেয়ার উইন্ডো */
         .modal {
             display: none; 
             position: fixed;
@@ -81,56 +81,87 @@
             align-items: center;
             z-index: 1000;
         }
-        .modal-content {
-            background: #1a1a24;
-            padding: 20px;
-            border-radius: 16px;
+        .vlc-window {
+            background: #2b2b2b; /* VLC ক্লাসিক গ্রে কালার */
+            border: 2px solid #555;
+            border-radius: 6px;
             width: 90%;
-            max-width: 750px;
-            text-align: center;
-            border: 1px solid #333;
-            position: relative;
-        }
-        .close-btn {
-            position: absolute;
-            top: 10px; right: 20px;
-            font-size: 30px; color: #aaa; cursor: pointer;
-            z-index: 10;
-        }
-        .close-btn:hover { color: white; }
-        
-        #web-player-wrapper {
-            margin-top: 15px;
-            background: #000;
-            border-radius: 8px;
+            max-width: 800px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
             overflow: hidden;
+        }
+        
+        /* VLC টপ বার */
+        .vlc-header {
+            background: linear-gradient(to bottom, #3c3c3c, #2a2a2a);
+            padding: 8px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #1a1a1a;
+            font-size: 14px;
+            font-weight: bold;
+            color: #ddd;
+        }
+        .vlc-logo-text { display: flex; align-items: center; gap: 8px; }
+        .vlc-cone { width: 16px; height: 16px; background: #ff8800; clip-path: polygon(20% 100%, 80% 100%, 60% 0%, 40% 0%); }
+        .vlc-close { font-size: 20px; color: #bbb; cursor: pointer; line-height: 1; }
+        .vlc-close:hover { color: #ff3333; }
+
+        /* ভিডিও স্ক্রিন এরিয়া */
+        .vlc-screen {
+            background: #000;
             aspect-ratio: 16/9;
+            width: 100%;
         }
         .video-js { width: 100% !important; height: 100% !important; }
+
+        /* VLC এর আসল অরেঞ্জ থিম ওভাররাইড */
+        .video-js .vjs-play-progress, .video-js .vjs-volume-level { background-color: #ff8800 !important; }
+        .video-js .vjs-big-play-button { background-color: rgba(255, 136, 0, 0.8) !important; border-color: #ff8800 !important; }
+
+        /* VLC বটম স্ট্যাটাস বার */
+        .vlc-footer {
+            background: #252525;
+            padding: 6px 12px;
+            font-size: 12px;
+            color: #888;
+            border-top: 1px solid #333;
+            text-align: left;
+        }
     </style>
 </head>
 <body>
 
-    <h1>লাইভ টিভি পোর্টাল</h1>
+    <h1>VLC ওয়েব লাইভ টিভি পোর্টাল</h1>
 
     <div class="controls">
         <select id="category-filter" class="category-select">
             <option value="all">সব ক্যাটাগরি</option>
         </select>
-        <input type="text" id="search" class="search-box" placeholder="চ্যানেলের নাম টাইপ করুন...">
+        <input type="text" id="search" class="search-box" placeholder="চ্যানেল খুঁজুন...">
     </div>
 
     <div id="tv-grid" class="tv-grid"></div>
 
     <div id="player-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <h3 id="modal-channel-name" style="margin: 0 0 10px 0; color: #00ff88;">চ্যানেলের নাম</h3>
+        <div class="vlc-window">
+            <div class="vlc-header">
+                <div class="vlc-logo-text">
+                    <div class="vlc-cone"></div>
+                    <span id="vlc-title">VLC Media Player - Live Stream</span>
+                </div>
+                <span class="vlc-close" onclick="closeVlc()">&times;</span>
+            </div>
             
-            <div id="web-player-wrapper">
-                <video id="tv-player" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto">
+            <div class="vlc-screen">
+                <video id="vlc-video-core" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto">
                     <p class="vjs-no-js">JavaScript Required</p>
                 </video>
+            </div>
+
+            <div class="vlc-footer">
+                🟢 Streaming Status: <span id="vlc-status" style="color: #00ff88;">Buffering...</span>
             </div>
         </div>
     </div>
@@ -138,11 +169,18 @@
     <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
 
     <script>
-        let player;
+        let vlcPlayer;
         let allChannels = [];
 
         window.onload = function() {
-            player = videojs('tv-player');
+            // প্লেয়ার ইনিশিয়ালাইজ করা এবং রেন্ডারিং স্পিড বাড়ানোর অপশন দেওয়া
+            vlcPlayer = videojs('vlc-video-core', {
+                html5: {
+                    vhs: { overrideNative: true },
+                    nativeAudioTracks: false,
+                    nativeVideoTracks: false
+                }
+            });
         };
 
         // 🔗 আপনার GitHub RAW JSON লিঙ্কটি এখানে বসান
@@ -170,7 +208,6 @@
         function renderGrid(channels) {
             const grid = document.getElementById('tv-grid');
             grid.innerHTML = '';
-            
             channels.forEach(channel => {
                 const card = document.createElement('div');
                 card.className = 'channel-card';
@@ -178,40 +215,42 @@
                     <div class="channel-name">${channel.name}</div>
                     <div class="channel-cat">${channel.category || 'Live'}</div>
                 `;
-                
                 card.onclick = function() {
-                    openPlayer(channel.url, channel.name);
+                    openVlcPlayer(channel.url, channel.name);
                 };
                 grid.appendChild(card);
             });
         }
 
-        // 💡 এই ফাংশনটি দিয়ে ভিডিওটি সাইটের ভেতরেই প্লে করা হচ্ছে
-        function openPlayer(url, name) {
-            document.getElementById('modal-channel-name').innerText = name;
+        // VLC প্লেয়ার ওপেন করার মেইন ফাংশন
+        function openVlcPlayer(url, name) {
+            document.getElementById('vlc-title').innerText = "VLC Media Player - " + name;
             document.getElementById('player-modal').style.display = "flex";
+            document.getElementById('vlc-status').innerText = "Connecting to stream...";
+            document.getElementById('vlc-status').style.color = "#ff8800";
 
-            // ⚡ CORS Bypass Proxy (ভিডিও লিঙ্ক ব্রাউজারে খোলার ট্রিক)
-            // যদি কোনো লিঙ্ক প্লে না হয়, তবে নিচের লাইনের শুরুতে থাকা '//' কেটে দিতে পারেন
-            // let proxyUrl = "https://cors-anywhere.herokuapp.com/" + url;
-            
-            player.src({
-                src: url, // প্রক্সি ব্যবহার করতে চাইলে এখানে 'proxyUrl' বসাবেন
+            // ডাইরেক্ট HLS লোডিং মেকানিজম (VLC ডিকোডার ইঞ্জিন ফ্রেন্ডলি)
+            vlcPlayer.src({
+                src: url,
                 type: 'application/x-mpegURL'
             });
             
-            player.play().catch(e => {
-                console.log("Playback error: ", e);
+            vlcPlayer.play().then(() => {
+                document.getElementById('vlc-status').innerText = "Playing (Live)";
+                document.getElementById('vlc-status').style.color = "#00ff88";
+            }).catch(e => {
+                document.getElementById('vlc-status').innerText = "Playback failed. Checking CORS or Link validity.";
+                document.getElementById('vlc-status').style.color = "#ff3333";
             });
         }
 
-        function closeModal() {
+        function closeVlc() {
             document.getElementById('player-modal').style.display = "none";
-            player.pause();
-            player.reset(); // প্লেয়ার মেমোরি ক্লিয়ার করা
+            vlcPlayer.pause();
+            vlcPlayer.reset();
         }
 
-        // ফিল্টারিং
+        // ফিল্টারিং লজিক
         function filterChannels() {
             const searchKeyword = document.getElementById('search').value.toLowerCase();
             const selectedCategory = document.getElementById('category-filter').value;
