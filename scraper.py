@@ -4,12 +4,29 @@ import re
 import asyncio
 import aiohttp
 
-# ১. বিশ্বস্ত ও আপডেটেড সোর্স (যেখানে Sony, Star, Sports চ্যানেল আছে)
+# ১. বিশ্বস্ত ও আপডেটেড সোর্স
 sources = [
     "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/bd.m3u", # বাংলাদেশ
-    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in.m3u", # ইন্ডিয়া
-    "https://raw.githubusercontent.com/ttoorruu/Bangladesh-IPTV/main/bd.m3u" # স্পেশাল বিডি ও ভারতীয় চ্যানেল সোর্স
+    "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/in.m3u", # ইন্ডিয়া
+    "https://raw.githubusercontent.com/ttoorruu/Bangladesh-IPTV/main/bd.m3u"  # স্পেশাল বিডি ও ভারতীয় সোর্স
 ]
+
+# 🏷️ অটোমেটিক ক্যাটাগরি নির্ধারণ করার ফাংশন
+def detect_category(channel_name):
+    name_lower = channel_name.lower()
+    
+    # স্পোর্টস চ্যানেলগুলোর কি-ওয়ার্ড
+    if any(k in name_lower for k in ['sports', 'sony ten', 'star sports', 't sports', 'cricket', 'football', 'willow']):
+        return "Sports"
+    # নিউজ চ্যানেলগুলোর কি-ওয়ার্ড
+    elif any(k in name_lower for k in ['news', 'somoy', 'jamuna', 'independent', 'ekattor', 'atn news']):
+        return "News"
+    # বিনোদন বা এন্টারটেইনমেন্ট চ্যানেল
+    elif any(k in name_lower for k in ['star plus', 'sony jalsa', 'zee', 'colors', 'entertainment', 'gtv', 'ntv']):
+        return "Entertainment"
+    # কোনোটার সাথে না মিললে General ক্যাটাগরি
+    else:
+        return "General"
 
 raw_channels = []
 
@@ -28,13 +45,15 @@ for source in sources:
                         current_name = name_match.group(1).strip()
                 elif line.startswith("http"):
                     url = line.strip()
-                    raw_channels.append({"name": current_name, "url": url})
+                    # নামের ওপর ভিত্তি করে অটো ক্যাটাগরি বের করা
+                    category = detect_category(current_name)
+                    raw_channels.append({"name": current_name, "url": url, "category": category})
     except Exception as e:
         print(f"Error loading source {source}: {e}")
 
-# ডুপ্লিকেট চ্যানেল বাদ দেওয়া
+# ডুপ্লিকেট চ্যানেল বাদ দেওয়া
 unique_channels = {ch['url']: ch for ch in raw_channels}.values()
-print(f"মোট {len(unique_channels)}টি ইউনিক চ্যানেল পাওয়া গেছে। চেকিং শুরু হচ্ছে...")
+print(f"মোট {len(unique_channels)}টি ইউনিক চ্যানেল পাওয়া গেছে। চেকিং শুরু হচ্ছে...")
 
 valid_channels = []
 
@@ -55,7 +74,7 @@ async def main():
 # রান করা হচ্ছে
 asyncio.run(main())
 
-print(f"চেকিং শেষ! সচল চ্যানেল পাওয়া গেছে: {len(valid_channels)}টি।")
+print(f"চেকিং শেষ! সচল চ্যানেল পাওয়া গেছে: {len(valid_channels)}টি।")
 
 # ৩. M3U ফাইল তৈরি করা
 with open("live_tv.m3u", "w", encoding="utf-8") as f:
@@ -63,7 +82,7 @@ with open("live_tv.m3u", "w", encoding="utf-8") as f:
     for ch in valid_channels:
         f.write(f"#EXTINF:-1,{ch['name']}\n{ch['url']}\n")
 
-# ৪. কোডুলারের জন্য JSON ফাইল তৈরি করা
+# ৪. ওয়েব অ্যাপ/কোডুলারের জন্য ক্যাটাগরি সহ JSON ফাইল তৈরি করা
 with open("channels.json", "w", encoding="utf-8") as f:
     json.dump(valid_channels, f, ensure_ascii=False, indent=4)
 
