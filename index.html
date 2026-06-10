@@ -9,73 +9,18 @@
     <link href="https://unpkg.com/@videojs/themes@1.0.1/dist/city/index.css" rel="stylesheet">
 
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            background-color: #121212;
-            color: #ffffff;
-            padding: 20px;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #00adb5;
-        }
-        /* প্লেয়ার সেকশন */
-        .player-wrapper {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto 30px auto;
-            background: #000;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-        .video-js {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-        }
-        /* চ্যানেল গ্রিড সেকশন */
-        .channel-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .channel-card {
-            background-color: #1e1e1e;
-            border: 1px solid #333;
-            border-radius: 10px;
-            padding: 15px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .channel-card:hover {
-            background-color: #00adb5;
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 173, 181, 0.4);
-        }
-        .channel-icon {
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
-        .channel-name {
-            font-size: 14px;
-            font-weight: 600;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #121212; color: #ffffff; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { text-align: center; margin-bottom: 20px; color: #00adb5; }
+        .player-wrapper { position: relative; width: 100%; max-width: 800px; margin: 0 auto 30px auto; background: #000; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .video-js { width: 100%; aspect-ratio: 16 / 9; }
+        .channel-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 15px; margin-top: 20px; }
+        .channel-card { background-color: #1e1e1e; border: 1px solid #333; border-radius: 10px; padding: 15px; text-align: center; cursor: pointer; transition: all 0.3s ease; }
+        .channel-card:hover { background-color: #00adb5; transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0, 173, 181, 0.4); }
+        .channel-icon { font-size: 32px; margin-bottom: 10px; }
+        .channel-name { font-size: 14px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .loading { text-align: center; font-size: 18px; color: #888; }
     </style>
 </head>
 <body>
@@ -84,76 +29,65 @@
     <h1>আমার লাইভ টিভি অ্যাপ</h1>
 
     <div class="player-wrapper">
-        <video id="my-live-player" class="video-js vjs-theme-city" controls preload="auto" width="800">
-            <p class="vjs-no-js">ভিডিও দেখতে জাভাস্ক্রিপ্ট অন করুন।</p>
-        </video>
+        <video id="my-live-player" class="video-js vjs-theme-city" controls preload="auto" width="800"></video>
     </div>
 
+    <div id="loading" class="loading">গিটহাব থেকে চ্যানেল লিস্ট লোড হচ্ছে...</div>
     <div class="channel-grid" id="channel-list"></div>
 </div>
 
 <script src="https://vjs.zencdn.net/8.10.0/video.js"></script>
 
 <script>
-    // ১. ভিডিও প্লেয়ার ইনিশিয়ালাইজ করা
-    const player = videojs('my-live-player', {
-        fluid: true,
-        autoplay: false,
-        controls: true
-    });
+    const player = videojs('my-live-player', { fluid: true, autoplay: false, controls: true });
 
-    // ২. আপনার ক্লাউডফ্লেয়ার প্রক্সি লিঙ্ক
+    // ১. আপনার ক্লাউডফ্লেয়ার প্রক্সি ইউআরএল
     const proxyUrl = "https://plain-silence-b434.azam-canvapro.workers.dev/?url=";
 
-    // ৩. ডিরেক্ট চ্যানেল ডেটা (যাতে লোকাল ফাইল বা সার্ভার জনিত কোনো এরর না আসে)
-    const channels = [
-        { name: "Somoy News TV (1080p)", url: "http://103.175.73.12:8080/SomoyTV/index.m3u8" },
-        { name: "Mohona TV (1080p)", url: "http://103.175.73.12:8080/MohonaTV/index.m3u8" },
-        { name: "Independent TV (1080p)", url: "http://103.175.73.12:8080/IndependentTV/index.m3u8" },
-        { name: "RTV (1080p)", url: "http://103.175.73.12:8080/RTV/index.m3u8" },
-        { name: "ATN News (1080p)", url: "http://103.175.73.12:8080/ATNNews/index.m3u8" }
-    ];
+    // ২. আপনার গিটহাবের Raw JSON ফাইলের লিঙ্কটি এখানে বসান
+    // উদাহরণ: "https://raw.githubusercontent.com/username/repo/main/channels.json"
+    const githubJsonUrl = "https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/main/channels.json"; 
 
-    // ৪. ইন্টারফেসে চ্যানেল লিস্ট লোড করার ফাংশন
-    function initChannels() {
-        const grid = document.getElementById('channel-list');
-
-        channels.forEach(channel => {
-            const card = document.createElement('div');
-            card.className = 'channel-card';
+    async function loadChannels() {
+        try {
+            // ম্যাজিক: গিটহাবের লিঙ্কটিকেও প্রক্সি দিয়ে ওপেন করা হচ্ছে যাতে লোকাল ফাইলে CORS এরর না আসে
+            const finalJsonFetchUrl = proxyUrl + encodeURIComponent(githubJsonUrl);
             
-            // ক্লিকে প্লে হবে
-            card.onclick = () => playChannel(channel.url);
+            const response = await fetch(finalJsonFetchUrl);
+            const channels = await response.json();
+            
+            document.getElementById('loading').style.display = 'none';
+            const grid = document.getElementById('channel-list');
 
-            card.innerHTML = `
-                <div class="channel-icon">📺</div>
-                <div class="channel-name" title="${channel.name}">${channel.name}</div>
-            `;
-            grid.appendChild(card);
-        });
+            channels.forEach(channel => {
+                const card = document.createElement('div');
+                card.className = 'channel-card';
+                card.onclick = () => playChannel(channel.url);
+                card.innerHTML = `
+                    <div class="channel-icon">📺</div>
+                    <div class="channel-name" title="${channel.name}">${channel.name}</div>
+                `;
+                grid.appendChild(card);
+            });
 
-        // প্রথম চ্যানেলটি ডিফল্ট হিসেবে প্লেয়ারে সেট করে রাখা
-        if(channels.length > 0) {
-            playChannel(channels[0].url);
+            if(channels.length > 0) {
+                playChannel(channels[0].url);
+            }
+
+        } catch (error) {
+            console.error("Error:", error);
+            document.getElementById('loading').innerText = "গিটহাব থেকে চ্যানেল লিস্ট লোড করতে সমস্যা হয়েছে!";
         }
     }
 
-    // ৫. প্রক্সি দিয়ে চ্যানেল প্লে করার মেইন ফাংশন
     function playChannel(rawUrl) {
-        // প্রক্সির সাথে m3u8 লিঙ্ক যুক্ত করা হচ্ছে
         const finalStreamUrl = proxyUrl + encodeURIComponent(rawUrl);
-
-        player.src({
-            src: finalStreamUrl,
-            type: 'application/x-mpegURL'
-        });
-
+        player.src({ src: finalStreamUrl, type: 'application/x-mpegURL' });
         player.play();
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // পেজ রেডি হলে রান হবে
-    window.onload = initChannels;
+    window.onload = loadChannels;
 </script>
 
 </body>
