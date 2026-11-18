@@ -1,13 +1,13 @@
 [
     {
+        "name": "Deshi TV (720p)",
+        "url": "https://deshitv.deshitv24.net/live/myStream/playlist.m3u8",
+        "category": "Bangladesh"
+    },
+    {
         "name": "9X Tashan (576p)",
         "url": "http://107.167.16.138/9xtashan/index.m3u8?token=test",
         "category": "Entertainment"
-    },
-    {
-        "name": "6 TV Telugu (576p)",
-        "url": "https://yuppparoriglin.akamaized.net/181224/smil:6tv.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b",
-        "category": "India"
     },
     {
         "name": "Channel S (720p)",
@@ -15,69 +15,14 @@
         "category": "General"
     },
     {
-        "name": "Ananda TV (720p)",
-        "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/anandatv.stream/live-orgin/anandatv.stream/playlist.m3u8",
+        "name": "My TV (480p)",
+        "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/mytv-up-off.stream/live-orgin/mytv-up-off.stream/playlist.m3u8",
         "category": "Bangladesh"
-    },
-    {
-        "name": "Aamar Bangla (720p)",
-        "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Aastha Bhajan (576p)",
-        "url": "http://103.175.73.12:8080/live/339/master.m3u8",
-        "category": "India"
-    },
-    {
-        "name": "News 21 Bangla TV (1080p)",
-        "url": "http://103.190.133.68:1935/news21live/live/playlist.m3u8",
-        "category": "News"
-    },
-    {
-        "name": "24 News (396p)",
-        "url": "https://segment.yuppcdn.net/110322/channel24/playlist.m3u8",
-        "category": "News"
-    },
-    {
-        "name": "Deshi TV (720p)",
-        "url": "https://deshitv.deshitv24.net/live/myStream/playlist.m3u8",
-        "category": "Bangladesh"
-    },
-    {
-        "name": "Boishakhi TV",
-        "url": "https://boishakhi.sonarbanglatv.com/boishakhi/boishakhitv/index.m3u8",
-        "category": "Bangladesh"
-    },
-    {
-        "name": "Sony Entertainment Television HD (1080p)",
-        "url": "http://38.96.178.205/SONYHD/index.m3u8",
-        "category": "Entertainment"
-    },
-    {
-        "name": "Aaj Tak HD (1080p)",
-        "url": "https://livehub-voidnet.onrender.com/cluster/streamcore/in/AAJTAK_REDIS.m3u8",
-        "category": "News"
     },
     {
         "name": "NAN TV (720p)",
         "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/nantv.stream/live-orgin/nantv.stream/playlist.m3u8",
         "category": "General"
-    },
-    {
-        "name": "Gazi TV (720p)",
-        "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/gazibdz.stream/live-orgin/gazibdz.stream/playlist.m3u8",
-        "category": "Bangladesh"
-    },
-    {
-        "name": "B4U Music (1080p)",
-        "url": "https://amg00877-b4unew-amg00877c3-xiaomi-in-5474.playouts.now.amagi.tv/720p/index.m3u8",
-        "category": "Entertainment"
-    },
-    {
-        "name": "9XM (576p)",
-        "url": "https://yupplivegcp2.yuppcdn.net/28072023/9xmusic_1800/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b",
-        "category": "Entertainment"
     },
     {
         "name": "9X Tashan (576p)",
@@ -88,6 +33,31 @@
         "name": "9XM (576p)",
         "url": "https://yupplivegcp2.yuppcdn.net/28072023/smil:9xmusic4.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b",
         "category": "Entertainment"
+    },
+    {
+        "name": "News 21 Bangla TV (1080p)",
+        "url": "http://103.190.133.68:1935/news21live/live/playlist.m3u8",
+        "category": "News"
+    },
+    {
+        "name": "Aamar Bangla (720p)",
+        "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Gazi TV (720p)",
+        "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/gazibdz.stream/live-orgin/gazibdz.stream/playlist.m3u8",
+        "category": "Bangladesh"
+    },
+    {
+        "name": "RTV (720p)",
+        "url": "https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/rtv-sg.stream/index.m3u8",
+        "category": "Bangladesh"
+    },
+    {
+        "name": "Boishakhi TV",
+        "url": "https://boishakhi.sonarbanglatv.com/boishakhi/boishakhitv/index.m3u8",
+        "category": "Bangladesh"
     },
     {
         "name": "9X Jalwa (576p)",
@@ -105,8 +75,23 @@
         "category": "News"
     },
     {
-        "name": "9X Tashan (1080p)",
-        "url": "https://amg01281-9xmediapvtltd-9xtashan-samsungin-xz1sd.amagi.tv/playlist/amg01281-9xmediapvtltd-9xtashan-samsungin/playlist.m3u8",
+        "name": "9XM (576p)",
+        "url": "https://yupplivegcp2.yuppcdn.net/28072023/9xmusic_1800/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b",
+        "category": "Entertainment"
+    },
+    {
+        "name": "24 News (396p)",
+        "url": "https://segment.yuppcdn.net/110322/channel24/playlist.m3u8",
+        "category": "News"
+    },
+    {
+        "name": "Aaj Tak HD (1080p)",
+        "url": "https://livehub-voidnet.onrender.com/cluster/streamcore/in/AAJTAK_REDIS.m3u8",
+        "category": "News"
+    },
+    {
+        "name": "9X Jhakaas (1080p)",
+        "url": "https://amg01281-9xmediapvtltd-9xjhakaas-samsungin-ci2cs.amagi.tv/playlist/amg01281-9xmediapvtltd-9xjhakaas-samsungin/playlist.m3u8",
         "category": "Entertainment"
     },
     {
@@ -115,23 +100,33 @@
         "category": "General"
     },
     {
-        "name": "Aaj Tak (404p)",
-        "url": "https://aajtaklive-amd.akamaized.net/hls/live/2014416/aajtak/aajtaklive/live_404p/chunks.m3u8",
-        "category": "News"
-    },
-    {
-        "name": "Movie Bangla",
-        "url": "http://alvetv.com/moviebanglatv/8080/index.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "9X Jhakaas (1080p)",
-        "url": "https://amg01281-9xmediapvtltd-9xjhakaas-samsungin-ci2cs.amagi.tv/playlist/amg01281-9xmediapvtltd-9xjhakaas-samsungin/playlist.m3u8",
+        "name": "Colors (576p)",
+        "url": "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/sg/YuppTV/ColorsAPAC.m3u8",
         "category": "Entertainment"
     },
     {
-        "name": "Matribhumi TV (720p)",
-        "url": "http://live.playmax.live/matribhumi/index.m3u8",
+        "name": "9X Tashan (1080p)",
+        "url": "https://amg01281-9xmediapvtltd-9xtashan-samsungin-xz1sd.amagi.tv/playlist/amg01281-9xmediapvtltd-9xtashan-samsungin/playlist.m3u8",
+        "category": "Entertainment"
+    },
+    {
+        "name": "Aastha HD (720p)",
+        "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/c0a91ce585024dc9ac69786ea4e6ebd4/index.m3u8",
+        "category": "India"
+    },
+    {
+        "name": "Aaj Tak (720p)",
+        "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/7b044d82f0bc462b8be3e2dec0bf2bd2/index.m3u8",
+        "category": "News"
+    },
+    {
+        "name": "Aaryaa TV (1080p)",
+        "url": "https://stream.ottlive.co.in/aryatvtamil/index.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Aaj Ki Khabar (1080p)",
+        "url": "https://stream.ottlive.co.in/aajkikhabar/index.m3u8",
         "category": "General"
     },
     {
@@ -140,13 +135,23 @@
         "category": "News"
     },
     {
-        "name": "Aaj Ki Khabar (1080p)",
-        "url": "https://stream.ottlive.co.in/aajkikhabar/index.m3u8",
+        "name": "4 SiDES TV (1080p)",
+        "url": "https://stream.ottlive.co.in/4sidestv/index.m3u8",
         "category": "General"
     },
     {
-        "name": "Aaryaa TV (1080p)",
-        "url": "https://stream.ottlive.co.in/aryatvtamil/index.m3u8",
+        "name": "&TV International (1080p)",
+        "url": "https://amg01117-amg01117c1-amgplt0029.playout.now3.amagi.tv/playlist/amg01117-amg01117c1-amgplt0029/playlist.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "6 TV Telugu (576p)",
+        "url": "https://yuppparoriglin.akamaized.net/181224/smil:6tv.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b",
+        "category": "India"
+    },
+    {
+        "name": "Matribhumi TV (720p)",
+        "url": "http://live.playmax.live/matribhumi/index.m3u8",
         "category": "General"
     },
     {
@@ -155,9 +160,69 @@
         "category": "General"
     },
     {
-        "name": "4 SiDES TV (1080p)",
-        "url": "https://stream.ottlive.co.in/4sidestv/index.m3u8",
+        "name": "Aastha (720p)",
+        "url": "https://aasthaott.akamaized.net/110923/smil:aasthatv.smil/index.m3u8",
+        "category": "India"
+    },
+    {
+        "name": "Asianet HD (1080p)",
+        "url": "https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starasianet.smil/chunklist_b1928000.m3u8",
         "category": "General"
+    },
+    {
+        "name": "Nexus TV (576p)",
+        "url": "https://tvsen6.aynaott.com/Epm7WrFa/index.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Rajdhani TV (1080p)",
+        "url": "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Maasranga TV (720p)",
+        "url": "https://tvsen5.aynaott.com/maasrangatv/index.m3u8",
+        "category": "Bangladesh"
+    },
+    {
+        "name": "Bangla Vision (720p)",
+        "url": "https://tvsen5.aynaott.com/banglavision/index.m3u8",
+        "category": "Bangladesh"
+    },
+    {
+        "name": "9X Tashan (576p)",
+        "url": "https://cdn.pishow.tv/ott/live/1613/master.m3u8",
+        "category": "Entertainment"
+    },
+    {
+        "name": "RTV (720p)",
+        "url": "https://tvsen5.aynaott.com/RtvHD/index.m3u8",
+        "category": "Bangladesh"
+    },
+    {
+        "name": "Duronto TV (720p)",
+        "url": "https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8",
+        "category": "Bangladesh"
+    },
+    {
+        "name": "ATN Bangla (720p)",
+        "url": "https://tvsen5.aynaott.com/atnbangla/index.m3u8",
+        "category": "Bangladesh"
+    },
+    {
+        "name": "NTV (720p)",
+        "url": "https://tvsen5.aynaott.com/xV4jEKf3D9zc/index.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "9X Tashan (1080p)",
+        "url": "https://wiselp.wiseplayout.com/9X_Tashan/master.m3u8",
+        "category": "Entertainment"
+    },
+    {
+        "name": "9X Jalwa (1080p)",
+        "url": "https://wiselp.wiseplayout.com/9X_Jalwa/master.m3u8",
+        "category": "Entertainment"
     },
     {
         "name": "9X Jhakaas (1080p)",
@@ -170,109 +235,9 @@
         "category": "Entertainment"
     },
     {
-        "name": "9X Jalwa (1080p)",
-        "url": "https://wiselp.wiseplayout.com/9X_Jalwa/master.m3u8",
+        "name": "7S Music (576p)",
+        "url": "https://fta.ektv.in/live/771/master.m3u8",
         "category": "Entertainment"
-    },
-    {
-        "name": "&TV International (1080p)",
-        "url": "https://amg01117-amg01117c1-amgplt0029.playout.now3.amagi.tv/playlist/amg01117-amg01117c1-amgplt0029/playlist.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "9X Tashan (1080p)",
-        "url": "https://wiselp.wiseplayout.com/9X_Tashan/master.m3u8",
-        "category": "Entertainment"
-    },
-    {
-        "name": "APN (576p)",
-        "url": "https://d1msejlow1t3l4.cloudfront.net/fta/apnnews/playlist.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Nexus TV (576p)",
-        "url": "https://tvsen6.aynaott.com/Epm7WrFa/index.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Duronto TV (720p)",
-        "url": "https://tvsen6.aynaott.com/6xyZ3N4oHv2KBJdB6W4p/index.m3u8",
-        "category": "Bangladesh"
-    },
-    {
-        "name": "9X Tashan (576p)",
-        "url": "https://tvsen6.aynaott.com/sMqhLN6n/index.m3u8",
-        "category": "Entertainment"
-    },
-    {
-        "name": "Ayush TV (576p)",
-        "url": "http://d1msejlow1t3l4.cloudfront.net/fta/ayushtv/playlist.m3u8",
-        "category": "India"
-    },
-    {
-        "name": "NTV (720p)",
-        "url": "https://tvsen5.aynaott.com/xV4jEKf3D9zc/index.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "ATN Bangla (720p)",
-        "url": "https://tvsen5.aynaott.com/atnbangla/index.m3u8",
-        "category": "Bangladesh"
-    },
-    {
-        "name": "Bangla Vision (720p)",
-        "url": "https://tvsen5.aynaott.com/banglavision/index.m3u8",
-        "category": "Bangladesh"
-    },
-    {
-        "name": "Telugu One (1080p)",
-        "url": "https://teluguone-yupptv.vgcdn.net/v1/019be9e3f04d1ea55784338b5c3e89/019be9e4474415fc60e93459e1e808/teluguone_2500k.m3u8",
-        "category": "India"
-    },
-    {
-        "name": "RTV (720p)",
-        "url": "https://tvsen5.aynaott.com/RtvHD/index.m3u8",
-        "category": "Bangladesh"
-    },
-    {
-        "name": "Maasranga TV (720p)",
-        "url": "https://tvsen5.aynaott.com/maasrangatv/index.m3u8",
-        "category": "Bangladesh"
-    },
-    {
-        "name": "Channel Divya (1080p)",
-        "url": "https://vg-pitaaratvlive.akamaized.net/v1/vglive-sk-906482/playlist.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Travelxp 4K Czechia",
-        "url": "http://88.212.7.14/live/travel_xp_4k/index.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Enterr 10 Bangla (720p)",
-        "url": "https://amg01448-samsungin-enterr10bangla-samsungin-ad-gg.amagi.tv/playlist/amg01448-samsungin-enterr10bangla-samsungin/playlist.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Aastha (720p)",
-        "url": "https://aasthaott.akamaized.net/110923/smil:aasthatv.smil/index.m3u8",
-        "category": "India"
-    },
-    {
-        "name": "TV9 Bangla (1080p)",
-        "url": "https://amg01106-amg01106c1-amgplt0747.playout.now3.amagi.tv/amg01106c1/hls.m3u8",
-        "category": "India"
-    },
-    {
-        "name": "9X Tashan (576p)",
-        "url": "https://cdn.pishow.tv/ott/live/1613/master.m3u8",
-        "category": "Entertainment"
-    },
-    {
-        "name": "Aastha (576p)",
-        "url": "https://cdn.pishow.tv/ott/live/1454/master.m3u8",
-        "category": "India"
     },
     {
         "name": "Aadinath TV (576p)",
@@ -280,8 +245,8 @@
         "category": "General"
     },
     {
-        "name": "7S Music (576p)",
-        "url": "https://cdn.pishow.tv/ott/live/1257/master.m3u8",
+        "name": "9XM (576p)",
+        "url": "https://fta.ektv.in/live/155/master.m3u8",
         "category": "Entertainment"
     },
     {
@@ -290,9 +255,24 @@
         "category": "General"
     },
     {
+        "name": "7S Music (576p)",
+        "url": "https://cdn.pishow.tv/ott/live/1257/master.m3u8",
+        "category": "Entertainment"
+    },
+    {
         "name": "10 TV (576p)",
         "url": "https://fta.ektv.in/live/686/master.m3u8",
         "category": "General"
+    },
+    {
+        "name": "9X Tashan (576p)",
+        "url": "https://fta.ektv.in/live/178/master.m3u8",
+        "category": "Entertainment"
+    },
+    {
+        "name": "9X Jalwa (576p)",
+        "url": "https://fta.ektv.in/live/161/master.m3u8",
+        "category": "Entertainment"
     },
     {
         "name": "4TV News (576p)",
@@ -305,58 +285,63 @@
         "category": "General"
     },
     {
-        "name": "Aastha (576p)",
-        "url": "https://fta.ektv.in/live/338/master.m3u8",
-        "category": "India"
+        "name": "10 TV (720p)",
+        "url": "https://mumbai-edge.smartplaytv.in/10TV/index.m3u8",
+        "category": "General"
     },
     {
-        "name": "9X Jalwa (576p)",
-        "url": "https://fta.ektv.in/live/161/master.m3u8",
+        "name": "7S Music (576p)",
+        "url": "https://mumbai-edge.smartplaytv.in/7SMusic/index.m3u8",
+        "category": "Entertainment"
+    },
+    {
+        "name": "The Unmute (1080p)",
+        "url": "https://unmute.akamaized.net/unmute/index.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Aaj Ki Khabar (1080p)",
+        "url": "https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/a65577ae-f9df-4ba8-bcb5-bcd1f04d06cb/index.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Bharat24 (1080p)",
+        "url": "https://vglivessai.akamaized.net/ptnr-lg/title-Bharat24News_LGIndia/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/ebcf5152-686a-43ae-ad13-15bc198112b7/index.m3u8",
+        "category": "News"
+    },
+    {
+        "name": "WION (1080p)",
+        "url": "https://d7x8z4yuq42qn.cloudfront.net/index_7.m3u8",
+        "category": "News"
+    },
+    {
+        "name": "Prag News (576p)",
+        "url": "https://hls.pragnews.com/master.m3u8",
+        "category": "News"
+    },
+    {
+        "name": "9X Tashan (576p)",
+        "url": "https://mumt01.tangotv.in/O5aw8Zn39XTASHAN/index.m3u8",
+        "category": "Entertainment"
+    },
+    {
+        "name": "Aadinath TV (576p)",
+        "url": "https://mumt01.tangotv.in/O5aw8Zn3AADINATHTV/index.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Asianet News (360p)",
+        "url": "https://asianetnews.vgcdn.net/vglive-sk-917600/playlist.m3u8",
+        "category": "News"
+    },
+    {
+        "name": "9XM (576p)",
+        "url": "https://streams.tangotv.in/9XM/ORIGIN/index.m3u8",
         "category": "Entertainment"
     },
     {
         "name": "9X Tashan (576p)",
-        "url": "https://fta.ektv.in/live/178/master.m3u8",
-        "category": "Entertainment"
-    },
-    {
-        "name": "7S Music (576p)",
-        "url": "https://fta.ektv.in/live/771/master.m3u8",
-        "category": "Entertainment"
-    },
-    {
-        "name": "9XM (576p)",
-        "url": "https://fta.ektv.in/live/155/master.m3u8",
-        "category": "Entertainment"
-    },
-    {
-        "name": "YRF Music Nepal",
-        "url": "https://vidaa.kableone.com/hls/live/2111218/YrfMusic/1.m3u8",
-        "category": "Entertainment"
-    },
-    {
-        "name": "Rajdhani TV (1080p)",
-        "url": "https://stream.shariarsuvo.com/hls5/rajdhanicable.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "NDTV Marathi (1080p)",
-        "url": "https://web-ndtv-marathi.akamaized.net/hls/live/2110470/ndtvmarathi/master_1.m3u8",
-        "category": "News"
-    },
-    {
-        "name": "KITE Victers (Kerala) (720p) [Not 24/7]",
-        "url": "https://932y4x26ljv8-hls-live.5centscdn.com/victers/tv.stream/playlist.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "SVBC 2 (1080p)",
-        "url": "https://player.mslivestream.net/tamil/ac206e74d75b285755ee4924df87d951.sdp/playlist.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Bhojpuri Cinema (720p)",
-        "url": "https://live-bhojpuri.akamaized.net/liveabr/playlist.m3u8",
+        "url": "https://streams.tangotv.in/9XTASHAN/ORIGIN/index.m3u8",
         "category": "Entertainment"
     },
     {
@@ -365,103 +350,18 @@
         "category": "Bangladesh"
     },
     {
-        "name": "B4U Kadak (1080p)",
-        "url": "https://amg00877-b4unew-amg00877c4-xiaomi-in-5473.playouts.now.amagi.tv/playlist.m3u8",
-        "category": "Entertainment"
-    },
-    {
-        "name": "7S Music (576p)",
-        "url": "https://mumbai-edge.smartplaytv.in/7SMusic/index.m3u8",
-        "category": "Entertainment"
-    },
-    {
-        "name": "10 TV (720p)",
-        "url": "https://mumbai-edge.smartplaytv.in/10TV/index.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Aaj Tak HD (1080p)",
-        "url": "https://feeds.intoday.in/aajtak/api/aajtakhd/master.m3u8",
-        "category": "News"
-    },
-    {
-        "name": "6 TV Telugu (576p)",
-        "url": "https://mumbai-edge.smartplaytv.in/6TVTelugu/index.m3u8",
-        "category": "India"
-    },
-    {
-        "name": "Aastha SD (576p)",
-        "url": "http://103.175.73.12:8080/live/338/master.m3u8",
-        "category": "India"
-    },
-    {
-        "name": "Sach Bedhadak (576p)",
-        "url": "https://sbnews.nexcdn.online/sbnews/live/index.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Aadinath TV (576p)",
-        "url": "https://mumt01.tangotv.in/O5aw8Zn3AADINATHTV/index.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "9X Tashan (576p)",
-        "url": "https://mumt01.tangotv.in/O5aw8Zn39XTASHAN/index.m3u8",
-        "category": "Entertainment"
-    },
-    {
-        "name": "Apna Punjab TV (720p)",
-        "url": "https://plus.gigabitcdn.net/live-stream/apna-punjab-H3sE/playlist.m3u8",
-        "category": "India"
-    },
-    {
-        "name": "9XM (576p)",
-        "url": "https://streams.tangotv.in/9XM/ORIGIN/index.m3u8",
-        "category": "Entertainment"
-    },
-    {
-        "name": "Aaj Tak (720p)",
-        "url": "https://feeds.intoday.in/aajtak/api/master.m3u8",
-        "category": "News"
-    },
-    {
-        "name": "9X Tashan (576p)",
-        "url": "https://streams.tangotv.in/9XTASHAN/ORIGIN/index.m3u8",
-        "category": "Entertainment"
-    },
-    {
-        "name": "Dangal 2 (576p)",
-        "url": "http://107.167.16.138/Dangal2/index.m3u8?token=test",
-        "category": "Entertainment"
-    },
-    {
-        "name": "Laxmi TV Gujarati (576p)",
-        "url": "http://27.124.71.27/Sun_Bangla/index.m3u8",
-        "category": "General"
-    },
-    {
         "name": "24 News (576p)",
         "url": "https://mumt07.tangotv.in/zHjX9OFlTWENTYFOURNEWS/index.m3u8",
         "category": "News"
     },
     {
-        "name": "7X Music (360p)",
-        "url": "https://cdn2.in/7xPunjabihls/live.m3u8",
-        "category": "Entertainment"
+        "name": "22Scope News (1080p)",
+        "url": "https://thelegitpro.in/HDlive/22scope/index.fmp4.m3u8",
+        "category": "News"
     },
     {
         "name": "Aagaaz Times (1080p)",
         "url": "https://live1.ottlive.co.in/aagaaztimes/index.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Aaseervatham TV (576p)",
-        "url": "https://mumt04.tangotv.in/m18aqlK4AASEERVATHAMTV/index.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "TV30 India (1080p)",
-        "url": "https://stream.tv30bharat.com/hls/shree/bhattji.m3u8",
         "category": "General"
     },
     {
@@ -470,164 +370,39 @@
         "category": "General"
     },
     {
-        "name": "Asianet News (1080p)",
-        "url": "https://asianet-samsung.vgcdn.net/ptnr-monitoring/vglive-sk-906908/playlist.m3u8",
+        "name": "Aaseervatham TV (576p)",
+        "url": "https://mumt04.tangotv.in/m18aqlK4AASEERVATHAMTV/index.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Mathrubhumi News (240p)",
+        "url": "https://mathrubhumicdn.vidgyor.com/mathrubhumi-origin/liveabr/playlist.m3u8",
         "category": "News"
     },
     {
-        "name": "NDTV Profit (1080p)",
-        "url": "https://ndtvprofit.akamaized.net/hls/live/2107404/ndtvprofit/chunklist_5.m3u8",
-        "category": "News"
+        "name": "Aastha Gujarati (576p)",
+        "url": "https://mumt04.tangotv.in/m18aqlK4AASTHAGUJARATI/index.m3u8",
+        "category": "India"
     },
     {
-        "name": "Dangal 2 (720p)",
-        "url": "https://live-dangal2.akamaized.net/liveabr/playlist.m3u8",
+        "name": "Janta TV (1080p)",
+        "url": "https://live.jswk.online/IK_RTPM/live/index.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "7X Music (360p)",
+        "url": "https://cdn2.in/7xPunjabihls/live.m3u8",
         "category": "Entertainment"
-    },
-    {
-        "name": "Raftaar Media (240p)",
-        "url": "https://6n3yorwpy9ok-hls-live.5centscdn.com/raftaarmedia/243bd1ce0387f18005abfc43b001646a.sdp/playlist.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "ETV Cinema (396p)",
-        "url": "https://yupplivegcpusa.yuppcdn.net/100823/smil:etvcinema.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b",
-        "category": "Entertainment"
-    },
-    {
-        "name": "NDTV (1080p)",
-        "url": "https://web-ndtv24x7-uk.akamaized.net/hls/live/2109290/ndtv24x7uk/master.m3u8",
-        "category": "News"
-    },
-    {
-        "name": "Headlines Tripura (720p)",
-        "url": "https://distro.ottlive.co.in/headlinestripura/headlinestripura/index.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "News TV India (720p)",
-        "url": "https://streamlive.livebox.co.in/NewsTVIndiahls/live.m3u8",
-        "category": "News"
-    },
-    {
-        "name": "Aastha Bhajan (576p)",
-        "url": "https://mumt05.tangotv.in/87NeALx2AASTHABHAJAN/index.m3u8",
-        "category": "India"
-    },
-    {
-        "name": "Aastha (576p)",
-        "url": "http://163.61.226.31:9981/stream/channelid/565086134?profile=pass",
-        "category": "India"
-    },
-    {
-        "name": "Chardikla Time TV North America (1080p)",
-        "url": "https://chardikalanorthamerica.gigabitcdn.net/in-chardikala/chardikala-north-usa/playlist.m3u8",
-        "category": "India"
-    },
-    {
-        "name": "Mahotsav TV (576p)",
-        "url": "https://livetv.mahotsavtv.com/mahotsavtv/playout/index.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "NDTV Marathi (576p)",
-        "url": "https://janya-ndtv.akamaized.net/ptnr-monitoring/vglive-sk-238731/ndtvmarathi_1500k.m3u8",
-        "category": "News"
-    },
-    {
-        "name": "Hosanna TV Hindi",
-        "url": "https://ktismaservers.in:3466/live/hosannattvhindhilive.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "TV9 Bharatvarsh (1080p)",
-        "url": "https://amg01106-amg01106c2-amgplt0747.playout.now3.amagi.tv/amg01106c2/hls.m3u8",
-        "category": "India"
-    },
-    {
-        "name": "Angel TV (720p)",
-        "url": "https://janya-digimix.akamaized.net/vglive-sk-394914/india/ngrp:angelindia_all/playlist.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "ABP News (576p)",
-        "url": "http://163.61.226.31:9981/stream/channelid/326226352?profile=pass",
-        "category": "News"
-    },
-    {
-        "name": "Gem TV (720p)",
-        "url": "https://gemtv.circle7stream.com/gem/fcce47a8559e30755582c396ce7fce9e.sdp/playlist.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Asianet HD (1080p)",
-        "url": "https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starasianet.smil/chunklist_b1928000.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Satsang Web TV (1080p)",
-        "url": "https://d1ji7e9jbzm5g8.cloudfront.net/out/v1/769f22f64d80442889306b9c4abea63c/index.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "News18 Bangla (1080p)",
-        "url": "https://amg01448-samsungin-news18bangla-samsungin-ad-qy.amagi.tv/playlist/amg01448-samsungin-news18bangla-samsungin/playlist.m3u8",
-        "category": "News"
-    },
-    {
-        "name": "Shubh Cinema TV (720p)",
-        "url": "https://d393sxaxig6bax.cloudfront.net/out/v1/589cf2cf44bf42bb941e817a2240d62e/index.m3u8",
-        "category": "Entertainment"
-    },
-    {
-        "name": "Bhagyam TV (1080p)",
-        "url": "https://ott.bhagyam.net/hls/bhagyamweb/index-1409148900-now.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Steelbird Music (720p) [Not 24/7]",
-        "url": "https://cdn2.in/SteelbirdMusicTVhls/live.m3u8",
-        "category": "Entertainment"
-    },
-    {
-        "name": "Amrita TV (576p)",
-        "url": "https://mumt07.tangotv.in/zHjX9OFlAMRITATV/index.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "ETV Comedy (1080p)",
-        "url": "https://cc-wie8j8y69d2uy.akamaized.net/WWBI/Amagi/ETV_Comedy_IN/playlist.m3u8",
-        "category": "Entertainment"
-    },
-    {
-        "name": "Chardikla Gurbaani TV (1080p)",
-        "url": "https://chardikalatimestv.gigabitcdn.net/in-chardikala/chardikala-gurbani-tv/playlist.m3u8",
-        "category": "India"
-    },
-    {
-        "name": "Zainabia Channel",
-        "url": "https://zainabia.livebox.co.in/ZainabiaChannelhls/channel.m3u8",
-        "category": "India"
-    },
-    {
-        "name": "Sanskar Web TV (1080p)",
-        "url": "https://deatfcv3xdvi3.cloudfront.net/out/v1/7a43dd2f64e34ec28da1b4bd6923251a/index.m3u8",
-        "category": "India"
     },
     {
         "name": "News9Live (1080p)",
-        "url": "https://amg01106-amg01106c3-amgplt0747.playout.now3.amagi.tv/amg01106c3/hls.m3u8",
+        "url": "https://amg01106-amg01106c3-amgplt0844.playout.now3.amagi.tv/ts-ap-s1-n1/playlist/amg01106-amg01106c3-amgplt0844/playlist.m3u8",
         "category": "News"
     },
     {
-        "name": "Angel TV (576p)",
-        "url": "https://mumt01.tangotv.in/O5aw8Zn3ANGELTVHD/index.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Asianet News (576p)",
-        "url": "https://streams.tangotv.in/ASIANETNEWS/ORIGIN/index.m3u8",
-        "category": "News"
+        "name": "Joy TV (1080p)",
+        "url": "https://ktismaservers.in:3412/live/joytvlive.m3u8",
+        "category": "India"
     },
     {
         "name": "Mango Mobile TV (1080p)",
@@ -635,13 +410,18 @@
         "category": "General"
     },
     {
-        "name": "Good News Today (720p)",
-        "url": "https://cc-89m9zu7a2upfe.akamaized.net/hls/live/2016145/gnt/gntlive/playlist.m3u8",
-        "category": "News"
+        "name": "Movie Bangla",
+        "url": "http://alvetv.com/moviebanglatv/8080/index.m3u8",
+        "category": "General"
     },
     {
-        "name": "Thalaa TV (1080p)",
-        "url": "https://streams2.sofast.tv/ptnr-khabriya/title-THALAA-TV-TAM_Khabriya/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/c9d5c8a0-8c52-47bc-954d-e64a11314de2/manifest.m3u8",
+        "name": "Bharat Express (1080p)",
+        "url": "https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e029a22c-cbd9-493b-9b37-e7f0cabe78cc/index.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "India Today (720p)",
+        "url": "https://livehub-voidnet.onrender.com/cluster/streamcore/in/INDIATODAY_StreamOrchestrator.m3u8",
         "category": "General"
     },
     {
@@ -650,138 +430,13 @@
         "category": "India"
     },
     {
-        "name": "D5 Channel Punjabi (1080p)",
-        "url": "https://d5channel.akamaized.net/D5Channel/master.m3u8",
-        "category": "India"
-    },
-    {
-        "name": "Makkal TV (576i)",
-        "url": "https://5k8q87azdy4v-hls-live.wmncdn.net/MAKKAL/271ddf829afeece44d8732757fba1a66.sdp/playlist.m3u8",
+        "name": "Asianet HD (720p)",
+        "url": "https://listas-m3u8.github.io/iptv/128.19.173.10:8888/ASIANETHD.m3u8",
         "category": "General"
     },
     {
-        "name": "Aastha Gujarati (576p)",
-        "url": "https://mumt04.tangotv.in/m18aqlK4AASTHAGUJARATI/index.m3u8",
-        "category": "India"
-    },
-    {
-        "name": "Shri Shyam TV (1080p)",
-        "url": "https://cloudcdn.in/live/shreeshyamtv/index.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Power TV (576p)",
-        "url": "https://powertvkannada.com/hls/stream.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Hare Krsna TV (720p)",
-        "url": "https://airtelapp.shemaroo.com/harekrsnatv/smil:harekrsnatvadp.smil/playlist.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "D5 Channel Punjabi (1080p)",
-        "url": "https://d5.tv360.ca:3453/live/cd5live.m3u8",
-        "category": "India"
-    },
-    {
-        "name": "Anjan TV (576p)",
-        "url": "https://mumt06.tangotv.in/qYyB8fXVANJANTV/index.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Republic Bharat (576p)",
-        "url": "http://163.61.226.31:9981/stream/channelid/1090287783?profile=pass",
-        "category": "General"
-    },
-    {
-        "name": "ETV News (1080p)",
-        "url": "https://cc-3448kp65yhc5w.akamaized.net/WWBI/Amagi/ETV_News_IN/playlist.m3u8",
-        "category": "News"
-    },
-    {
-        "name": "Ananda Barta (720p)",
-        "url": "https://account19.livebox.co.in/Anandabarta2hls/live.m3u8",
-        "category": "Bangladesh"
-    },
-    {
-        "name": "BT TV (720p)",
-        "url": "https://feeds.intoday.in/bttv/itgd.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Knock Bhakti (1080p)",
-        "url": "https://knocktv2.wiseplayout.com/Knock_Bhakti_EST/master.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "BHI Channel (720p)",
-        "url": "https://server.livelegitpro.in/bhichannel/bhichannel/index.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "News 24 (576p)",
-        "url": "https://tvsen5.aynaott.com/News24/index.m3u8",
-        "category": "News"
-    },
-    {
-        "name": "News Nation (1080p)",
-        "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/6cd2f649739a45ca9de1daf81cc7d0f2/index.m3u8",
-        "category": "News"
-    },
-    {
-        "name": "Pradesh24 Gujarati (1080p)",
-        "url": "https://stream2.livebox.co.in/pradesh24hls/live.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Shiksha TV (720p)",
-        "url": "http://103.89.46.106:8080/hls/shikshatvhd/index.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Vaanavil TV (720p)",
-        "url": "https://6n3yope4d9ok-hls-live.5centscdn.com/vaanavil/TV.stream/playlist.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Anand TV (576p)",
-        "url": "https://indianews-yupp.vgcdn.net/anandtv/index.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Cnews Bharat (720p)",
-        "url": "https://legitpro.co.in/cnews/cnews/index.fmp4.m3u8",
-        "category": "News"
-    },
-    {
-        "name": "Colors (576p)",
-        "url": "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/sg/YuppTV/ColorsAPAC.m3u8",
-        "category": "Entertainment"
-    },
-    {
-        "name": "B4U Kadak (576p)",
-        "url": "https://mumt06.tangotv.in/qYyB8fXVB4UKADAK/index.m3u8",
-        "category": "Entertainment"
-    },
-    {
-        "name": "ANB News (720p)",
-        "url": "https://server.livelegitpro.in:9899/anbnews/anbnews/index.m3u8",
-        "category": "News"
-    },
-    {
-        "name": "Village TV (1080p)",
-        "url": "https://live.villagetv.net/villagetv/hd/index.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Chardikla Time TV (1080p)",
-        "url": "https://chardikalagurbanitv.gigabitcdn.net/in-chardikala/chardikala-timetv/playlist.m3u8",
-        "category": "India"
-    },
-    {
-        "name": "TV9 Bangla (720p)",
-        "url": "https://dyjmyiv3bp2ez.cloudfront.net/pub-iotv9banaen8yq/liveabr/playlist.m3u8",
+        "name": "GTC Punjabi (1080p)",
+        "url": "https://gtcpunjabi.akamaized.net/gtcpunjabi/index.m3u8",
         "category": "India"
     },
     {
@@ -790,118 +445,173 @@
         "category": "General"
     },
     {
-        "name": "India Today (720p) [Geo-blocked]",
-        "url": "https://amg00644-amg00644c1-ondemandkorea-amesia-10266.playouts.now.amagi.tv/playlist/amg00644-tvtodaynetworkltdfast-indiatoday-ondemandkoreaamesia/playlist.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Hebron TV (1080p)",
-        "url": "https://account20.livebox.co.in/charleshls/live.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "ETV Plus (396p)",
-        "url": "https://yupplivegcpusa.yuppcdn.net/100823/smil:etvplus.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b",
-        "category": "India"
-    },
-    {
-        "name": "NDTV Madhya Pradesh Chhattisgarh (1080p)",
-        "url": "https://ndtvregional.akamaized.net/hls/live/2102726-b/ndtvmpcg/master_1.m3u8",
-        "category": "News"
-    },
-    {
-        "name": "NDTV Rajasthan (1080p)",
-        "url": "https://vg-ndtvlive.akamaized.net/ptnr-yupptv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-753641/main.m3u8",
-        "category": "News"
-    },
-    {
-        "name": "Anjan TV (720p)",
-        "url": "https://anjan.vstream.online/anjanorg/ngrp:anjan_hdall/playlist.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "NDTV 24X7 (480p) [Not 24/7]",
-        "url": "https://ndtv24x7elemarchana.akamaized.net/hls/live/2003678/ndtv24x7/master.m3u8",
-        "category": "News"
-    },
-    {
-        "name": "Amrita TV (720p)",
-        "url": "https://ddash74r36xqp.cloudfront.net/master.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "NTC TV (720p)",
-        "url": "https://galaxyott.live/hls/ntv.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "R Plus (768p)",
-        "url": "https://thelegitpro.in/pntv/rplusnews24x7/index.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Bharat Samachar (480p)",
-        "url": "https://idvd.multitvsolution.com/idvo/bharatsamachar.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Enterr 10 Bangla (720p) [Not 24/7]",
-        "url": "https://live-bangla.akamaized.net/liveabr/playlist.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Indywood TV (720p)",
-        "url": "https://43wrzjnpqoxe-hls-live.wmncdn.net/indywood/indywoodtv/index.m3u8",
-        "category": "India"
-    },
-    {
-        "name": "Travelxp Czechia",
-        "url": "http://88.212.7.14/live/travel_xp/index.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "First India News (360p) [Not 24/7]",
-        "url": "https://xlbor37ydvaj-hls-live.wmncdn.net/firstindianewstv1/live.stream/index.m3u8",
-        "category": "News"
-    },
-    {
-        "name": "Bangla Jago (720p)",
-        "url": "https://banglajagotv.livebox.co.in/banglajagohls/24x7.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Guarantee News (1080p)",
-        "url": "https://guaranteenews.in:8443/live/gnews/index.m3u8",
-        "category": "News"
-    },
-    {
-        "name": "Salaam TV (720p)",
-        "url": "https://vg-zeefta.akamaized.net/ptnr-yupptv/title-zeesalaam/v1/manifest/611d79b11b77e2f571934fd80ca1413453772ac7/426c6db7-595e-4aa8-859c-7e86ed2811d0/af896be5-4743-41fc-8b6a-eb05e44f3a6e/3.m3u8",
-        "category": "India"
-    },
-    {
-        "name": "Ayush TV (576p)",
-        "url": "https://mumt07.tangotv.in/zHjX9OFlAYUSHTV/index.m3u8",
-        "category": "India"
-    },
-    {
-        "name": "TTN24 (720p)",
-        "url": "https://stream.joytvindia.com/stream/hls/ttn24/index.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "B4U Music (1080p)",
-        "url": "https://amg01408-amg01408c5-amgplt0747.playout.now3.amagi.tv/b4um001/playlist.m3u8",
+        "name": "7X Music (1080p)",
+        "url": "https://7xshreeshyam.akamaized.net/7XPunjabi/index.m3u8",
         "category": "Entertainment"
     },
     {
-        "name": "History TV18 HD (1080p) [Geo-blocked]",
-        "url": "https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/playlist/amg01448-samsungindia-historychannelenglish-samsungin/playlist.m3u8",
+        "name": "India TV Aap Ki Adalat (1080p) [Geo-blocked]",
+        "url": "https://amg01550-amg01550c6-samsung-in-4679.playouts.now.amagi.tv/playlist/amg01550-indiatvfast-indiatvakasamsung-samsungin/playlist.m3u8",
         "category": "General"
     },
     {
-        "name": "Times Now Navbharat HD (1080p)",
-        "url": "https://yupprestreamliveus.akamaized.net/v1/vglive-sk-717514/main.m3u8",
+        "name": "Mango (576p)",
+        "url": "https://stmv6.voxtvhd.com.br/cinehindi/cinehindi/playlist.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Aastha (576p)",
+        "url": "https://cdn.pishow.tv/ott/live/1454/master.m3u8",
+        "category": "India"
+    },
+    {
+        "name": "Aaj Tak (404p)",
+        "url": "https://aajtaklive-amd.akamaized.net/hls/live/2014416/aajtak/aajtaklive/live_404p/chunks.m3u8",
+        "category": "News"
+    },
+    {
+        "name": "Laxmi TV Gujarati (576p)",
+        "url": "http://27.124.71.27/Sun_Bangla/index.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "NDTV Marathi (1080p)",
+        "url": "https://web-ndtv-marathi.akamaized.net/hls/live/2110470/ndtvmarathi/master_1.m3u8",
+        "category": "News"
+    },
+    {
+        "name": "Munsif TV (576p)",
+        "url": "https://live1.ottlive.co.in/munsiftv/munsiftv/index.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "B4U Kadak (1080p)",
+        "url": "https://amg00877-b4unew-amg00877c4-xiaomi-in-5473.playouts.now.amagi.tv/playlist.m3u8",
+        "category": "Entertainment"
+    },
+    {
+        "name": "Dangal TV (720p)",
+        "url": "https://live-dangal.akamaized.net/liveabr/playlist.m3u8",
+        "category": "Entertainment"
+    },
+    {
+        "name": "Namdhari (404p) [Not 24/7]",
+        "url": "https://namdhari.tv/live/sbs1.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Zee Business (720p)",
+        "url": "https://dwby15d04agvq.cloudfront.net/index_5.m3u8",
+        "category": "Entertainment"
+    },
+    {
+        "name": "Aaj Tak (720p)",
+        "url": "https://feeds.intoday.in/aajtak/api/master.m3u8",
+        "category": "News"
+    },
+    {
+        "name": "WION (720p)",
+        "url": "https://d7x8z4yuq42qn.cloudfront.net/index_1.m3u8",
+        "category": "News"
+    },
+    {
+        "name": "Raj Pariwar (576p)",
+        "url": "https://livestream.rajtvnet.in/hlslive/Admin/px08241089/live/Raj_Pariwar/master_1.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Punjabi Shorts (1080p)",
+        "url": "https://punjabishorts.akamaized.net/punjabshort/index.m3u8",
+        "category": "India"
+    },
+    {
+        "name": "Aaj Tak HD (1080p)",
+        "url": "https://feeds.intoday.in/aajtak/api/aajtakhd/master.m3u8",
+        "category": "News"
+    },
+    {
+        "name": "Awakening TV (576p)",
+        "url": "https://d2gvyg6lvauoko.cloudfront.net/230226/awakeningtv/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b",
+        "category": "General"
+    },
+    {
+        "name": "TV9 Bharatvarsh (1080p)",
+        "url": "https://amg01106-amg01106c2-amgplt0747.playout.now3.amagi.tv/amg01106c2/hls.m3u8",
+        "category": "India"
+    },
+    {
+        "name": "Shubh TV (1080p)",
+        "url": "https://d2g1vdc6ozl2o8.cloudfront.net/out/v1/0a0dc7d7911b4fddbb4dfc963fdd4b9e/index.m3u8",
+        "category": "India"
+    },
+    {
+        "name": "Asianet News (576p)",
+        "url": "https://streams.tangotv.in/ASIANETNEWS/ORIGIN/index.m3u8",
+        "category": "News"
+    },
+    {
+        "name": "NDTV Good Times (1080p)",
+        "url": "https://amg01448-samsungin-ndtvgoodtimes-samsungin-ad-gp.amagi.tv/playlist/amg01448-samsungin-ndtvgoodtimes-samsungin/playlist.m3u8",
+        "category": "News"
+    },
+    {
+        "name": "Awaaz India TV (720p) [Not 24/7]",
+        "url": "https://awaazindia.livebox.co.in/AwaazIndaTVhls/Live.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Media9 (1080p)",
+        "url": "https://media9news.akamaized.net/media9/hls/media9tv.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Gujarat First (1080p)",
+        "url": "https://live1.ottlive.co.in/gujaratfirst/index.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Zee 24 Taas (720p)",
+        "url": "https://dgrvlduwztkd4.cloudfront.net/index_5.m3u8",
+        "category": "Entertainment"
+    },
+    {
+        "name": "Darshana TV (576p)",
+        "url": "https://yuppparoriglin.akamaized.net/181224/smil:darshanatv.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b",
+        "category": "General"
+    },
+    {
+        "name": "Vision (576p)",
+        "url": "http://103.85.204.205:1935/VISIONMEDIA/live/playlist.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "D5 Channel Punjabi (1080p)",
+        "url": "https://d5channel.akamaized.net/D5Channel/master.m3u8",
+        "category": "India"
+    },
+    {
+        "name": "Janam TV (576p)",
+        "url": "https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/janamtv_nim_https/140622/janamtv/playlist.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Safari TV (480p) [Not 24/7]",
+        "url": "https://j78dp346yq5r-hls-live.5centscdn.com/safari/live.stream/playlist.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Sanskar Web TV (1080p)",
+        "url": "https://deatfcv3xdvi3.cloudfront.net/out/v1/7a43dd2f64e34ec28da1b4bd6923251a/index.m3u8",
+        "category": "India"
+    },
+    {
+        "name": "ABP News (576p)",
+        "url": "https://mumt04.tangotv.in/m18aqlK4ABPNEWS/index.m3u8",
+        "category": "News"
+    },
+    {
+        "name": "Shri Shyam TV (1080p)",
+        "url": "https://7xshreeshyam.akamaized.net/shreeshyamtv/index.m3u8",
         "category": "General"
     },
     {
@@ -910,44 +620,199 @@
         "category": "General"
     },
     {
-        "name": "Desi Channel (720p)",
-        "url": "https://livestream.unlimitedcdn.com/agm-dc/desi-channel/index.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Alankar TV (720p)",
-        "url": "https://livetv.tarangplus.in/alankar-origin/live/playlist.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "Shalom Global (1080p)",
-        "url": "https://d28xtgmk9tfk6b.cloudfront.net/master.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "HNN 24x7 (576p)",
-        "url": "https://ott.livelegitpro.in:9899/hnnnews/hnnnews/index.m3u8",
-        "category": "General"
-    },
-    {
-        "name": "TV9 Kannada (1080p)",
-        "url": "https://amg01106-amg01106c5-amgplt0747.playout.now3.amagi.tv/amg01106c5/hls.m3u8",
+        "name": "TV9 Gujarati (1080p)",
+        "url": "https://amg01106-amg01106c6-amgplt0747.playout.now3.amagi.tv/amg01106c6/hls.m3u8",
         "category": "India"
     },
     {
-        "name": "B4U Kadak (1080p)",
-        "url": "https://amg01408-amg01408c6-amgplt0747.playout.now3.amagi.tv/b4ua001/playlist.m3u8",
-        "category": "Entertainment"
+        "name": "TV9 Marathi (1080p)",
+        "url": "https://amg01106-amg01106c7-amgplt0747.playout.now3.amagi.tv/amg01106c7/hls.m3u8",
+        "category": "India"
     },
     {
-        "name": "Mangalmay TV (576p)",
-        "url": "https://yupplivegcpusa.yuppcdn.net/100823/mangalmay_1800/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b",
+        "name": "Dheeran TV (576p)",
+        "url": "https://live.we2live.in/dheerantv/dheerantv/playlist.m3u8",
         "category": "General"
     },
     {
-        "name": "NDTV (1080p)",
-        "url": "https://yupprestreamliveus.akamaized.net/v1/vglive-sk-401405/0194a671d8dd1ebd416a3e0a8a4524/0194a67abb941ebd47043cd206ba4f/main.m3u8",
+        "name": "Janam TV (576p)",
+        "url": "https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/janamtv_nim_https/140622/janamtvdev/playlist.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Steelbird Music (720p) [Not 24/7]",
+        "url": "https://cdn2.in/SteelbirdMusicTVhls/live.m3u8",
+        "category": "Entertainment"
+    },
+    {
+        "name": "ABP Sanjha (576p)",
+        "url": "https://mumt04.tangotv.in/m18aqlK4ABPSANJHA/index.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "News Marathi 24x7 (720p)",
+        "url": "https://live1.ottlive.co.in/newsmarathi/newsmarathi/index.m3u8",
         "category": "News"
+    },
+    {
+        "name": "News9Live (1080p)",
+        "url": "https://bharatvarshnews9.akamaized.net/ts-ap-s1-n1/playlist/amg01106-amg01106c3-amgplt0844/playlist.m3u8",
+        "category": "News"
+    },
+    {
+        "name": "WION (504p)",
+        "url": "https://d7x8z4yuq42qn.cloudfront.net/index_2.m3u8",
+        "category": "News"
+    },
+    {
+        "name": "Kalika TV (576p)",
+        "url": "http://server.applelive.in/kalikatv/kalikatv.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Kalaignar Murasu (396p)",
+        "url": "https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/murasu_nim_https/050522/murasu/playlist.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Shree Sanatan TV (720p)",
+        "url": "http://sanatan.valamtv.in/hls/shree/bhattji.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Sada TV (1080p) [Not 24/7]",
+        "url": "http://cdn12.henico.net:8080/live/sadatv/index.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "D5 Channel Punjabi (1080p)",
+        "url": "https://d5.tv360.ca:3453/live/cd5live.m3u8",
+        "category": "India"
+    },
+    {
+        "name": "CCV (480p)",
+        "url": "https://5a1178b42cc03.streamlock.net/8212/8212/playlist.m3u8",
+        "category": "India"
+    },
+    {
+        "name": "Zee Telugu HD (720p)",
+        "url": "https://listas-m3u8.github.io/iptv/128.19.173.10:8888/ZEETELUGUHD.m3u8",
+        "category": "Entertainment"
+    },
+    {
+        "name": "Bhagyam TV (1080p)",
+        "url": "https://ott.bhagyam.net/hls/bhagyamweb/index-1409148900-now.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Gem TV (720p)",
+        "url": "https://gemtv.circle7stream.com/gem/fcce47a8559e30755582c396ce7fce9e.sdp/playlist.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Bhojpuri Cinema (720p)",
+        "url": "https://live-bhojpuri.akamaized.net/liveabr/playlist.m3u8",
+        "category": "Entertainment"
+    },
+    {
+        "name": "KITE Victers (Kerala) (720p) [Not 24/7]",
+        "url": "https://932y4x26ljv8-hls-live.5centscdn.com/victers/tv.stream/playlist.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "NTC TV (720p)",
+        "url": "https://galaxyott.live/hls/ntv.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Living India News (1080p)",
+        "url": "https://livingindia.ottlive.co.in/livingindia/index.m3u8",
+        "category": "News"
+    },
+    {
+        "name": "Aastha (576p)",
+        "url": "http://163.61.226.31:9981/stream/channelid/565086134?profile=pass",
+        "category": "India"
+    },
+    {
+        "name": "Pitaara Comedy (1080p)",
+        "url": "https://janya-pitaaralive.akamaized.net/ptnr-monitoring/v1/vglive-sk-217489/live/PitaaraComedy_15/chunks.m3u8",
+        "category": "Entertainment"
+    },
+    {
+        "name": "Angel TV (576p)",
+        "url": "https://yuppnimrestreammum.akamaized.net/181224/smil:angeltv.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b",
+        "category": "General"
+    },
+    {
+        "name": "Aradana TV (576p)",
+        "url": "https://yuppnimrestreammum.akamaized.net/181224/smil:aradanatv.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b",
+        "category": "General"
+    },
+    {
+        "name": "ABP News (1080p)",
+        "url": "https://d1rc86nwwc9fag.cloudfront.net/vglive-sk-472500/abpnews/master.m3u8",
+        "category": "News"
+    },
+    {
+        "name": "Valam TV (720p)",
+        "url": "http://cabletv.valamtv.in/hls/stream0.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Movies Now HD (576p)",
+        "url": "http://27.124.71.27/Movies_Now/index.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Chardikla Time TV (1080p)",
+        "url": "https://chardikalagurbanitv.gigabitcdn.net/in-chardikala/chardikala-timetv/playlist.m3u8",
+        "category": "India"
+    },
+    {
+        "name": "INH 24x7 (360p)",
+        "url": "https://7epd6o8edk9b-hls-live.wmncdn.net/inh24/live.stream/playlist.m3u8",
+        "category": "India"
+    },
+    {
+        "name": "Vaanavil TV (720p)",
+        "url": "https://6n3yope4d9ok-hls-live.5centscdn.com/vaanavil/TV.stream/playlist.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Asianet Suvarna News (1080p) [Not 24/7]",
+        "url": "https://asianetnews.vgcdn.net/vglive-sk-335835/playlist.m3u8",
+        "category": "News"
+    },
+    {
+        "name": "Anand TV (576p)",
+        "url": "https://indianews-yupp.vgcdn.net/anandtv/index.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "India Daily Live (1080p)",
+        "url": "https://indiadaily.ottlive.co.in/indiadailylive/index.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "News 11 (576p)",
+        "url": "https://live1.ottlive.co.in/news11/news11/index.m3u8",
+        "category": "News"
+    },
+    {
+        "name": "Rozana Spokesman (1080p)",
+        "url": "https://live1.ottlive.co.in/spokesman/spokesman/index.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Taaza TV (720p)",
+        "url": "https://live.we2live.in/taazatv/live/playlist.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Daily Post TV (1080p)",
+        "url": "https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/103b8dd3-a888-4d1d-89a5-8a4bc25e48c1/index.m3u8",
+        "category": "General"
     },
     {
         "name": "Vision Beats (720p)",
@@ -955,18 +820,213 @@
         "category": "General"
     },
     {
-        "name": "Zee TV HD (720p) [Geo-blocked]",
-        "url": "http://41.205.93.154/ZEE-TV/index.m3u8",
-        "category": "Entertainment"
+        "name": "ETV Plus (396p)",
+        "url": "https://yupplivegcpusa.yuppcdn.net/100823/smil:etvplus.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b",
+        "category": "India"
     },
     {
-        "name": "WOW Kidz (720p)",
-        "url": "https://yuppparoriglin.akamaized.net/181224/smil:wowkidzhindi.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b",
+        "name": "SVBC 2 (1080p)",
+        "url": "https://player.mslivestream.net/tamil/ac206e74d75b285755ee4924df87d951.sdp/playlist.m3u8",
         "category": "General"
     },
     {
-        "name": "Asianet News (720p)",
-        "url": "https://asianet-prasarbharati.vgcdn.net/out/v1/4bb23b61ea954a7a9ab0aedc5f71d998/playlist.m3u8",
+        "name": "ETV Cinema (396p)",
+        "url": "https://yupplivegcpusa.yuppcdn.net/100823/smil:etvcinema.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b",
+        "category": "Entertainment"
+    },
+    {
+        "name": "Dangal 2 (576p)",
+        "url": "http://107.167.16.138/Dangal2/index.m3u8?token=test",
+        "category": "Entertainment"
+    },
+    {
+        "name": "NDTV Madhya Pradesh Chhattisgarh (1080p)",
+        "url": "https://vg-ndtvlive.akamaized.net/ptnr-yupptv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/vglive-sk-860950/main.m3u8",
+        "category": "News"
+    },
+    {
+        "name": "ETV Josh (1080p)",
+        "url": "https://cc-uyh1ow5zouoio.akamaized.net/WWBI/Amagi/ETV_Josh_IN/playlist.m3u8",
+        "category": "India"
+    },
+    {
+        "name": "R Plus (768p)",
+        "url": "https://thelegitpro.in/pntv/rplusnews24x7/index.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Colors Rishtey Americas (396p)",
+        "url": "https://manatv.akamaized.net/090823/smil:ristheyamerica.smil/playlist.m3u8",
+        "category": "Entertainment"
+    },
+    {
+        "name": "CNBC Bajar (1080p)",
+        "url": "https://n18syndication.akamaized.net/bpk-tv/CNBC_Bazaar_NW18_MOB/output01/master.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Pitaara (1080p)",
+        "url": "https://d3i5c1nmken8bh.cloudfront.net/Live/Pitaara_TV_SCTE/playlist.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Aastha Bhajan (576p)",
+        "url": "http://103.175.73.12:8080/live/339/master.m3u8",
+        "category": "India"
+    },
+    {
+        "name": "IBC 24 (576p)",
+        "url": "https://ott-prasar.ibc24.in/livestream.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Zee Uttar Pradesh/Uttarakhand (720p)",
+        "url": "https://duw35ict5q7th.cloudfront.net/index_3.m3u8",
+        "category": "Entertainment"
+    },
+    {
+        "name": "RT India (1080p)",
+        "url": "https://rt-india.rttv.com/dvr/rtindia/playlist.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Chardikla Gurbaani TV (1080p)",
+        "url": "https://chardiklagurbani.akamaized.net/chardiklagurbanitv/master.m3u8",
+        "category": "India"
+    },
+    {
+        "name": "Sana Plus (1080p) [Not 24/7]",
+        "url": "https://galaxyott.live/hls/sanaplus.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "B4U Bhojpuri (1080p)",
+        "url": "https://cdnb4u.wiseplayout.com/B4U_Bhojpuri/master.m3u8",
+        "category": "Entertainment"
+    },
+    {
+        "name": "Subin TV (1080p)",
+        "url": "https://stream.galaxyott.live/live/subintv/index.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "GTC Punjabi (1080p)",
+        "url": "https://neotv.ottlive.co.in/gtcpunjabi/index.m3u8",
+        "category": "India"
+    },
+    {
+        "name": "TV9 Telugu (1080p)",
+        "url": "https://amg01106-amg01106c4-amgplt0747.playout.now3.amagi.tv/amg01106c4/hls.m3u8",
+        "category": "India"
+    },
+    {
+        "name": "VR Live (720p)",
+        "url": "https://channel.vrlivegujarat.com/hls/vrchannel.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "B4U Kadak (1080p)",
+        "url": "https://amg01408-amg01408c6-amgplt0747.playout.now3.amagi.tv/b4ua001/playlist.m3u8",
+        "category": "Entertainment"
+    },
+    {
+        "name": "Zee Business (576p)",
+        "url": "https://dwby15d04agvq.cloudfront.net/index_1.m3u8",
+        "category": "Entertainment"
+    },
+    {
+        "name": "Ayush TV (360p) [Not 24/7]",
+        "url": "https://95eryw39dwn4-hls-live.wmncdn.net/Ayushu/271ddf829afeece44d8732757fba1a66.sdp/index.m3u8",
+        "category": "India"
+    },
+    {
+        "name": "Manorama News (576p)",
+        "url": "https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/manoramanews_nim_https/240122/manoramanews/playlist.m3u8",
+        "category": "News"
+    },
+    {
+        "name": "B4U Movies (1080p)",
+        "url": "https://amg01408-amg01408c7-amgplt0747.playout.now3.amagi.tv/b4umo001/playlist.m3u8",
+        "category": "Entertainment"
+    },
+    {
+        "name": "Desi Channel (720p)",
+        "url": "https://livestream.unlimitedcdn.com/agm-dc/desi-channel/index.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Channel Divya (1080p)",
+        "url": "https://vg-pitaaratvlive.akamaized.net/v1/vglive-sk-906482/playlist.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "TTN24 (720p)",
+        "url": "https://stream.joytvindia.com/stream/hls/ttn24/index.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Village TV (576p)",
+        "url": "https://villagetv.applelive.in/villagetv/villagetv/index.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Mangalmay TV (576p)",
+        "url": "https://yupplivegcpusa.yuppcdn.net/100823/mangalmay_1800/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b",
+        "category": "General"
+    },
+    {
+        "name": "Tolly TV (1080p)",
+        "url": "https://streams2.sofast.tv/ptnr-khabriya/title-TOLLY-TV-TEL_Khabriya/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/9bb55dff-7a74-43aa-bcf7-ea537e8b9e92/manifest.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Shubhsandesh TV (720p) [Not 24/7]",
+        "url": "https://6284rn2xr7xv-hls-live.wmncdn.net/shubhsandeshtv1/live123.stream/index.m3u8",
+        "category": "Bangladesh"
+    },
+    {
+        "name": "Thalaa TV (1080p)",
+        "url": "https://streams2.sofast.tv/ptnr-khabriya/title-THALAA-TV-TAM_Khabriya/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/c9d5c8a0-8c52-47bc-954d-e64a11314de2/manifest.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "CNBC Awaaz (1080p)",
+        "url": "https://n18syndication.akamaized.net/bpk-tv/CNBC_Awaaz_NW18_MOB/output01/master.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "GTC News (1080p)",
+        "url": "https://gtc.ottlive.co.in/gtcnews/index.m3u8",
+        "category": "News"
+    },
+    {
+        "name": "Prudent Media (1080p)",
+        "url": "https://prudentmcdn.rixcast.com/prudentm.m3u8",
+        "category": "India"
+    },
+    {
+        "name": "Harvest TV (720p)",
+        "url": "https://7mbd4ogkr3gx-hls-live.wmncdn.net/harvesttvlive1/bbb19eae240ec100af921d511efc86a0.sdp/index.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Pulari TV",
+        "url": "https://royalstarindia.co.in/pularitv_hls/pularitv.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Harvest TV Keralam (720p)",
+        "url": "https://7mbd4ogkr3gx-hls-live.wmncdn.net/harvestenglish/d1796a22d24e8696c7d5d0b5c349fdd2.sdp/index.m3u8",
+        "category": "General"
+    },
+    {
+        "name": "Punjabi Hits (1080p)",
+        "url": "https://livingindia.ottlive.co.in/punjabihits/index.m3u8",
+        "category": "India"
+    },
+    {
+        "name": "Zee News (1080p)",
+        "url": "https://dknttpxmr0dwf.cloudfront.net/index_57.m3u8",
         "category": "News"
     }
 ]
